@@ -9,7 +9,7 @@
 
     $baseClasses = "
         group relative inline-flex items-center justify-center
-        px-8 py-3.5 rounded-lg font-body font-semibold text-[16px]
+        px-4 sm:px-6 lg:px-7 py-2 sm:py-2.5 lg:py-3 rounded-lg font-body font-semibold text-[13px] sm:text-[14px] lg:text-[15px]
         overflow-hidden transition-all duration-300 cursor-pointer
         select-none shadow-xs hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2
     ";
@@ -31,7 +31,7 @@
         ></span>
 
         <!-- 2. 3D Text & Icon Flip Container -->
-        <span class="relative z-10 inline-flex flex-col overflow-hidden h-[24px] justify-center" style="perspective: 600px;">
+        <span class="relative z-10 inline-flex flex-col overflow-hidden h-[20px] sm:h-[22px] lg:h-[24px] justify-center" style="perspective: 600px;">
             <!-- Front Face -->
             <span
                 class="inline-flex items-center gap-2.5 transform transition-all duration-300 ease-out group-hover:-translate-y-full group-hover:-rotate-x-90 group-hover:opacity-0 origin-top"
@@ -64,7 +64,7 @@
         ></span>
 
         <!-- 2. 3D Text & Icon Flip Container -->
-        <span class="relative z-10 inline-flex flex-col overflow-hidden h-[24px] justify-center" style="perspective: 600px;">
+        <span class="relative z-10 inline-flex flex-col overflow-hidden h-[20px] sm:h-[22px] lg:h-[24px] justify-center" style="perspective: 600px;">
             <!-- Front Face -->
             <span
                 class="inline-flex items-center gap-2.5 transform transition-all duration-300 ease-out group-hover:-translate-y-full group-hover:-rotate-x-90 group-hover:opacity-0 origin-top"

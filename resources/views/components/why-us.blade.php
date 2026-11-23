@@ -1,4 +1,4 @@
-<section id="why-us" class="py-24 lg:py-32 bg-secondary-bg text-brand-dark relative overflow-hidden">
+<section id="why-us" class="py-14 sm:py-20 lg:py-28 bg-secondary-bg text-brand-dark relative overflow-hidden">
     
     <!-- Left Decorative Dot Matrix Pattern (Matching Uploaded Reference Design) -->
     <div class="absolute left-4 sm:left-8 lg:left-12 top-1/2 -translate-y-1/2 pointer-events-none select-none hidden sm:block opacity-65" aria-hidden="true">
@@ -13,12 +13,12 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         <!-- 1. Centered Section Header (Scroll Reveal on Viewport Entry) -->
-        <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20 reveal-on-scroll">
-            <h2 class="font-heading font-normal text-3xl sm:text-4xl lg:text-[44px] text-brand-dark tracking-tight mb-4 uppercase">
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16 lg:mb-20 reveal-on-scroll">
+            <h2 class="font-heading font-normal text-2xl sm:text-3xl lg:text-[40px] text-brand-dark tracking-tight mb-3 sm:mb-4 uppercase">
                 Why FOOD GURU CHAKRA™?
             </h2>
 
-            <p class="font-body text-[16px] sm:text-[18px] text-brand-muted leading-relaxed max-w-2xl mx-auto">
+            <p class="font-body text-[13px] sm:text-[15px] lg:text-[18px] text-brand-muted leading-relaxed max-w-2xl mx-auto">
                 Integrated industry capability, evidence-based recommendations, and people-centred development tailored for sustainable food systems.
             </p>
         </div>
@@ -59,34 +59,34 @@
             ];
         @endphp
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 lg:gap-x-14 gap-y-12 lg:gap-y-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 sm:gap-x-10 lg:gap-x-14 gap-y-8 sm:gap-y-12 lg:gap-y-16">
             @foreach ($differentiators as $index => $item)
                 <div class="flex flex-col items-center text-center cursor-default reveal-on-scroll delay-{{ (($index % 3) + 1) * 100 }}">
                     
                     <!-- Clean Minimalist Outline Icon Container (No Scale Hover Animation) -->
-                    <div class="w-16 h-16 sm:w-18 sm:h-18 flex items-center justify-center mb-5 text-brand">
+                    <div class="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mb-3 sm:mb-5 text-brand">
                         @if ($item['icon'] === 'shield-check')
-                            <x-lucide-shield-check class="w-11 h-11 text-brand stroke-[1.4]" />
+                            <x-lucide-shield-check class="w-8 h-8 sm:w-11 sm:h-11 text-brand stroke-[1.4]" />
                         @elseif ($item['icon'] === 'utensils-crossed')
-                            <x-lucide-utensils-crossed class="w-11 h-11 text-brand stroke-[1.4]" />
+                            <x-lucide-utensils-crossed class="w-8 h-8 sm:w-11 sm:h-11 text-brand stroke-[1.4]" />
                         @elseif ($item['icon'] === 'clipboard-check')
-                            <x-lucide-clipboard-check class="w-11 h-11 text-brand stroke-[1.4]" />
+                            <x-lucide-clipboard-check class="w-8 h-8 sm:w-11 sm:h-11 text-brand stroke-[1.4]" />
                         @elseif ($item['icon'] === 'users')
-                            <x-lucide-users class="w-11 h-11 text-brand stroke-[1.4]" />
+                            <x-lucide-users class="w-8 h-8 sm:w-11 sm:h-11 text-brand stroke-[1.4]" />
                         @elseif ($item['icon'] === 'layers')
-                            <x-lucide-layers class="w-11 h-11 text-brand stroke-[1.4]" />
+                            <x-lucide-layers class="w-8 h-8 sm:w-11 sm:h-11 text-brand stroke-[1.4]" />
                         @elseif ($item['icon'] === 'trending-up')
-                            <x-lucide-trending-up class="w-11 h-11 text-brand stroke-[1.4]" />
+                            <x-lucide-trending-up class="w-8 h-8 sm:w-11 sm:h-11 text-brand stroke-[1.4]" />
                         @endif
                     </div>
 
                     <!-- Title (Clean and Static) -->
-                    <h3 class="font-heading font-normal text-xl sm:text-[22px] text-brand-dark mb-3 tracking-tight">
+                    <h3 class="font-heading font-normal text-lg sm:text-[22px] text-brand-dark mb-2 sm:mb-3 tracking-tight">
                         {{ $item['title'] }}
                     </h3>
 
                     <!-- Short Description -->
-                    <p class="font-body text-[14px] sm:text-[15px] text-brand-muted leading-relaxed max-w-xs mx-auto">
+                    <p class="font-body text-[13px] sm:text-[15px] text-brand-muted leading-relaxed max-w-xs mx-auto">
                         {{ $item['desc'] }}
                     </p>
 

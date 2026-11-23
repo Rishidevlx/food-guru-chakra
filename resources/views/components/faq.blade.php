@@ -1,12 +1,12 @@
-<section id="faq" class="py-20 lg:py-28 bg-secondary-bg text-brand-dark relative overflow-hidden" x-data="{ active: null }">
+<section id="faq" class="py-14 sm:py-20 lg:py-28 bg-secondary-bg text-brand-dark relative overflow-hidden" x-data="{ active: null }">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         <!-- 1. Centered Header -->
-        <div class="text-center mb-12 lg:mb-16 reveal-on-scroll">
-            <h2 class="font-heading font-normal text-3xl sm:text-4xl lg:text-[44px] text-brand-dark tracking-tight mb-4">
+        <div class="text-center mb-8 sm:mb-12 lg:mb-16 reveal-on-scroll">
+            <h2 class="font-heading font-normal text-2xl sm:text-3xl lg:text-[40px] text-brand-dark tracking-tight mb-2.5 sm:mb-4">
                 Frequently Asked Questions
             </h2>
-            <p class="font-body text-[15px] sm:text-[17px] text-brand-muted leading-relaxed font-medium max-w-xl mx-auto">
+            <p class="font-body text-[13px] sm:text-[15px] lg:text-[17px] text-brand-muted leading-relaxed font-normal max-w-xl mx-auto">
                 Everything you need to know about our food safety, QHSE consultancy, audits, and capability training programs.
             </p>
         </div>
@@ -65,10 +65,10 @@
                     <button
                         type="button"
                         @click="active = (active === {{ $index }} ? null : {{ $index }})"
-                        class="w-full flex items-center justify-between px-6 sm:px-8 py-5 text-left focus:outline-none cursor-pointer select-none group"
+                        class="w-full flex items-center justify-between px-4 sm:px-8 py-3.5 sm:py-5 text-left focus:outline-none cursor-pointer select-none group"
                         :aria-expanded="active === {{ $index }}"
                     >
-                        <span class="font-body text-[15px] sm:text-[17px] font-semibold text-brand-dark group-hover:text-brand transition-colors pr-4">
+                        <span class="font-body text-[14px] sm:text-[17px] font-semibold text-brand-dark group-hover:text-brand transition-colors pr-3 sm:pr-4">
                             {{ $faq['q'] }}
                         </span>
 
@@ -90,7 +90,7 @@
                         x-transition:leave="transition ease-in duration-150"
                         x-transition:leave-start="opacity-100 translate-y-0"
                         x-transition:leave-end="opacity-0 -translate-y-2"
-                        class="px-6 sm:px-8 pb-6 pt-1 text-brand-muted font-body text-[14px] sm:text-[15px] leading-relaxed font-medium border-t border-brand-divider/40"
+                        class="px-4 sm:px-8 pb-5 pt-1 text-brand-muted font-body text-[13px] sm:text-[15px] leading-relaxed font-normal border-t border-brand-divider/40"
                     >
                         {{ $faq['a'] }}
                     </div>

@@ -17,27 +17,27 @@
 
     <!-- Marquee Track Wrapper -->
     <div class="flex overflow-hidden relative z-0">
-        <div class="animate-marquee flex items-center gap-10 sm:gap-14 py-2 cursor-default">
+        <div class="animate-marquee flex items-center gap-6 sm:gap-10 lg:gap-14 py-2 cursor-default">
             
             <!-- Loop Set 1 -->
             @foreach ($expertiseItems as $item)
-                <div class="flex items-center gap-10 sm:gap-14 flex-shrink-0">
-                    <span class="font-heading font-normal text-xl sm:text-2xl md:text-[26px] tracking-wider !text-white uppercase whitespace-nowrap">
+                <div class="flex items-center gap-6 sm:gap-10 lg:gap-14 flex-shrink-0">
+                    <span class="font-heading font-normal text-xs sm:text-lg md:text-2xl lg:text-[26px] tracking-wider !text-white uppercase whitespace-nowrap">
                         {{ $item }}
                     </span>
                     <!-- White Leaf Icon Separator -->
-                    <x-lucide-leaf class="w-5 h-5 sm:w-6 sm:h-6 !text-white flex-shrink-0 stroke-[2]" />
+                    <x-lucide-leaf class="w-3.5 h-3.5 sm:w-5 sm:h-5 lg:w-6 lg:h-6 !text-white flex-shrink-0 stroke-[2]" />
                 </div>
             @endforeach
 
             <!-- Loop Set 2 (Identical for Seamless Infinite Scroll) -->
             @foreach ($expertiseItems as $item)
-                <div class="flex items-center gap-10 sm:gap-14 flex-shrink-0">
-                    <span class="font-heading font-normal text-xl sm:text-2xl md:text-[26px] tracking-wider !text-white uppercase whitespace-nowrap">
+                <div class="flex items-center gap-6 sm:gap-10 lg:gap-14 flex-shrink-0">
+                    <span class="font-heading font-normal text-xs sm:text-lg md:text-2xl lg:text-[26px] tracking-wider !text-white uppercase whitespace-nowrap">
                         {{ $item }}
                     </span>
                     <!-- White Leaf Icon Separator -->
-                    <x-lucide-leaf class="w-5 h-5 sm:w-6 sm:h-6 !text-white flex-shrink-0 stroke-[2]" />
+                    <x-lucide-leaf class="w-3.5 h-3.5 sm:w-5 sm:h-5 lg:w-6 lg:h-6 !text-white flex-shrink-0 stroke-[2]" />
                 </div>
             @endforeach
 

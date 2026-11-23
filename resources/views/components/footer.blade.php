@@ -4,11 +4,11 @@
 ================================================================================ -->
 
 <!-- 1. TOP SECTION: Quick Links Strip (Matching FAQ background #EEF6EF with Golden Bullets) -->
-<section class="py-14 sm:py-16 bg-secondary-bg border-t border-brand-divider text-brand-dark relative z-10">
+<section class="py-10 sm:py-16 bg-secondary-bg border-t border-brand-divider text-brand-dark relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal-on-scroll">
         
         <!-- Section Title -->
-        <h2 class="font-heading font-normal text-2xl sm:text-3xl text-brand-dark mb-8 tracking-tight">
+        <h2 class="font-heading font-normal text-xl sm:text-2xl lg:text-3xl text-brand-dark mb-5 sm:mb-8 tracking-tight">
             Quick Links
         </h2>
 
@@ -98,7 +98,7 @@
 </section>
 
 <!-- 2. MAIN FOOTER BLOCK (Dark Pine Green from Theme with Clean 5 Columns) -->
-<footer class="bg-brand-dark text-white pt-16 sm:pt-20 pb-10 border-t border-white/10 relative overflow-hidden">
+<footer class="bg-brand-dark text-white pt-12 sm:pt-20 pb-8 sm:pb-10 border-t border-white/10 relative overflow-hidden">
     
     <!-- Ambient subtle background glow -->
     <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-brand/20 blur-3xl pointer-events-none"></div>
@@ -106,7 +106,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         <!-- 5-Column Grid Layout with Explicit Pure White Headings -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-8 mb-10 sm:mb-16">
 
             <!-- Col 1: Our Services (lg:col-span-2) -->
             <div class="lg:col-span-2">

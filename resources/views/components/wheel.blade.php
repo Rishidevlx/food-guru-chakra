@@ -42,7 +42,7 @@
     ];
 @endphp
 
-<div class="relative w-full max-w-[460px] lg:max-w-[500px] aspect-square mx-auto flex items-center justify-center p-2 select-none">
+<div class="relative w-full max-w-[190px] sm:max-w-[260px] md:max-w-[340px] lg:max-w-[480px] aspect-square mx-auto flex items-center justify-center p-1 sm:p-2 select-none">
     
     <!-- Decorative Outer Glow Ring using CSS variable -->
     <div class="absolute inset-4 rounded-full bg-gradient-to-tr from-brand/12 via-brand-dark/5 to-brand-gold/10 blur-xl -z-10"></div>

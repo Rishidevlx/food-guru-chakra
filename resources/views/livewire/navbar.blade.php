@@ -1,5 +1,5 @@
 <header
-    x-data="{ isScrolled: false }"
+    x-data="{ isScrolled: false, mobileOpen: false }"
     x-init="isScrolled = window.scrollY > 20"
     @scroll.window="isScrolled = (window.scrollY > 20)"
     :class="isScrolled ? 'shadow-sm border-b border-brand-border bg-white/95 backdrop-blur-md py-3.5' : 'shadow-none border-b border-transparent bg-transparent py-4 sm:py-5'"
@@ -43,30 +43,26 @@
                 @endforeach
             </nav>
 
-            <!-- 3. RIGHT: Quick Call Button (Minimal Radius like Home buttons) & Mobile Menu Toggle -->
+            <!-- 3. RIGHT: Quick Call Button & Mobile Menu Toggle -->
             <div class="flex items-center gap-4">
                 
-                <!-- Quick Call Action (rounded-lg matching home buttons) -->
+                <!-- Quick Call Action (Desktop/Tablet) -->
                 <a
-                    href="tel:+919876543210"
+                    href="tel:+919442054000"
                     class="hidden sm:inline-flex items-center gap-2.5 px-5 py-2.5 rounded-lg bg-brand text-white hover:bg-brand-hover transition-all duration-300 text-sm font-semibold shadow-xs hover:shadow-md"
                 >
                     <x-lucide-phone-call class="w-4 h-4 text-white" />
                     <span>Quick Call</span>
                 </a>
 
-                <!-- Mobile Menu Button (Livewire Interactive Toggle) -->
+                <!-- Mobile Menu Button (Hamburger) -->
                 <button
                     type="button"
-                    wire:click="toggleMobileMenu"
-                    class="lg:hidden p-2 rounded-lg text-brand-dark hover:bg-brand-light focus:outline-none"
-                    aria-label="Toggle navigation menu"
+                    @click="mobileOpen = true"
+                    class="lg:hidden p-2 rounded-lg text-brand-dark hover:bg-brand-light focus:outline-none cursor-pointer"
+                    aria-label="Open navigation menu"
                 >
-                    @if ($mobileMenuOpen)
-                        <x-lucide-x class="w-6 h-6" />
-                    @else
-                        <x-lucide-menu class="w-6 h-6" />
-                    @endif
+                    <x-lucide-menu class="w-6 h-6" />
                 </button>
 
             </div>
@@ -74,30 +70,66 @@
         </div>
     </div>
 
-    <!-- 4. MOBILE NAVIGATION DRAWER -->
-    @if ($mobileMenuOpen)
-        <div class="lg:hidden bg-white border-b border-brand-divider px-4 pt-3 pb-6 shadow-xl animate-fadeIn">
-            <div class="flex flex-col space-y-3">
-                @foreach ($navLinks as $link)
-                    <a
-                        href="{{ $link['url'] }}"
-                        wire:click="toggleMobileMenu"
-                        class="py-2.5 px-3 rounded-lg text-[16px] font-medium text-brand-dark hover:bg-brand-light transition-colors"
-                    >
-                        {{ $link['name'] }}
-                    </a>
-                @endforeach
+    <!-- 4. FULL-SCREEN MOBILE NAVIGATION OVERLAY (Smooth 60fps Animation) -->
+    <div
+        x-show="mobileOpen"
+        x-cloak
+        x-transition:enter="transition ease-out duration-300"
+        x-transition:enter-start="opacity-0 -translate-y-4 scale-98"
+        x-transition:enter-end="opacity-100 translate-y-0 scale-100"
+        x-transition:leave="transition ease-in duration-200"
+        x-transition:leave-start="opacity-100 translate-y-0 scale-100"
+        x-transition:leave-end="opacity-0 -translate-y-4 scale-98"
+        x-effect="document.body.classList.toggle('overflow-hidden', mobileOpen)"
+        class="fixed inset-0 z-[100] bg-white flex flex-col justify-between p-6 sm:p-8 min-h-screen overflow-y-auto lg:hidden"
+    >
+        <!-- Top Bar: Logo & Close Button -->
+        <div class="flex items-center justify-between pb-5 border-b border-brand-divider flex-shrink-0">
+            <a href="/" @click="mobileOpen = false" class="flex items-center focus:outline-none">
+                <img
+                    src="{{ asset('assets/logo/logo.png') }}"
+                    alt="FOOD GURU CHAKRA Logo"
+                    class="h-12 sm:h-14 w-auto object-contain"
+                />
+            </a>
 
-                <div class="pt-3 border-t border-brand-border">
-                    <a
-                        href="tel:+919876543210"
-                        class="w-full flex items-center justify-center gap-2 py-3 rounded-lg bg-brand text-white font-medium text-sm shadow-xs hover:bg-brand-hover transition-colors"
-                    >
-                        <x-lucide-phone-call class="w-4 h-4" />
-                        <span>Quick Call Now</span>
-                    </a>
-                </div>
-            </div>
+            <!-- Close (X) Button -->
+            <button
+                type="button"
+                @click="mobileOpen = false"
+                class="w-11 h-11 rounded-full bg-brand-light text-brand-dark hover:bg-brand hover:text-white flex items-center justify-center transition-all duration-200 focus:outline-none cursor-pointer"
+                aria-label="Close navigation menu"
+            >
+                <x-lucide-x class="w-6 h-6" />
+            </button>
         </div>
-    @endif
+
+        <!-- Navigation Links: Full-Screen Elegant Typography -->
+        <nav class="my-auto py-6 space-y-1">
+            @foreach ($navLinks as $link)
+                <a
+                    href="{{ $link['url'] }}"
+                    @click="mobileOpen = false"
+                    class="group flex items-center justify-between py-3.5 px-3 rounded-xl font-heading text-2xl font-normal text-brand-dark hover:text-brand hover:bg-brand-light/50 transition-all duration-200"
+                >
+                    <span>{{ $link['name'] }}</span>
+                    <x-lucide-arrow-right class="w-5 h-5 text-brand-muted opacity-40 group-hover:opacity-100 group-hover:text-brand transition-all transform group-hover:translate-x-1" />
+                </a>
+            @endforeach
+        </nav>
+
+        <!-- Bottom Action CTA -->
+        <div class="pt-5 border-t border-brand-divider space-y-3 flex-shrink-0">
+            <a
+                href="tel:+919442054000"
+                class="w-full flex items-center justify-center gap-3 py-3.5 rounded-xl bg-brand text-white font-body font-semibold text-base shadow-md hover:bg-brand-hover transition-all"
+            >
+                <x-lucide-phone-call class="w-5 h-5" />
+                <span>Quick Call (+91 94420 54000)</span>
+            </a>
+            <p class="text-center font-body text-xs text-brand-muted">
+                FOOD GURU CHAKRA™ &bull; Coimbatore (HQ)
+            </p>
+        </div>
+    </div>
 </header>

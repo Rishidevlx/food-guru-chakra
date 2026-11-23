@@ -1,21 +1,21 @@
-<section id="testimonials" class="py-20 lg:py-24 bg-white text-brand-dark relative overflow-hidden">
+<section id="testimonials" class="py-14 sm:py-20 lg:py-24 bg-white text-brand-dark relative overflow-hidden">
     
     <!-- Ambient subtle background glow -->
     <div class="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-brand-light/50 blur-3xl pointer-events-none"></div>
     <div class="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-brand-light/40 blur-3xl pointer-events-none"></div>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-10 lg:mb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-8 sm:mb-10 lg:mb-12">
         
         <!-- Section Header (Clean & Compact) -->
         <div class="text-center max-w-2xl mx-auto reveal-on-scroll">
 
             <!-- Main Heading (Reduced size per user request) -->
-            <h2 class="font-heading font-normal text-2xl sm:text-3xl lg:text-[34px] text-brand-dark tracking-tight mb-3 leading-tight">
+            <h2 class="font-heading font-normal text-[20px] sm:text-2xl lg:text-[32px] text-brand-dark tracking-tight mb-2 sm:mb-3 leading-tight">
                 Words of Praise from Industry Leaders
             </h2>
 
             <!-- Subtitle (Compact) -->
-            <p class="font-body text-[14px] sm:text-[15px] text-brand-muted leading-relaxed font-medium max-w-lg mx-auto">
+            <p class="font-body text-[12px] sm:text-[14px] text-brand-muted leading-relaxed font-normal max-w-lg mx-auto">
                 Real operational impact and compliance confidence shared by our partner institutions, hospitals, and food enterprises.
             </p>
         </div>
@@ -103,7 +103,7 @@
                     
                     <!-- Loop Set 1 -->
                     @foreach ($row1 as $card)
-                        <div class="w-[310px] sm:w-[360px] lg:w-[390px] flex-shrink-0 rounded-2xl sm:rounded-3xl p-6 sm:p-7 bg-white border border-brand-divider shadow-xs hover:border-brand/40 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                        <div class="w-[280px] sm:w-[350px] lg:w-[390px] flex-shrink-0 rounded-2xl sm:rounded-3xl p-6 sm:p-7 bg-white border border-brand-divider shadow-xs hover:border-brand/40 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
                             <div>
                                 <!-- Quote Icon -->
                                 <div class="w-10 h-10 rounded-xl bg-brand-light flex items-center justify-center text-brand mb-4">
@@ -137,7 +137,7 @@
 
                     <!-- Loop Set 2 (Identical for Seamless Loop) -->
                     @foreach ($row1 as $card)
-                        <div class="w-[310px] sm:w-[360px] lg:w-[390px] flex-shrink-0 rounded-2xl sm:rounded-3xl p-6 sm:p-7 bg-white border border-brand-divider shadow-xs hover:border-brand/40 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                        <div class="w-[280px] sm:w-[350px] lg:w-[390px] flex-shrink-0 rounded-2xl sm:rounded-3xl p-6 sm:p-7 bg-white border border-brand-divider shadow-xs hover:border-brand/40 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
                             <div>
                                 <!-- Quote Icon -->
                                 <div class="w-10 h-10 rounded-xl bg-brand-light flex items-center justify-center text-brand mb-4">
@@ -178,7 +178,7 @@
                     
                     <!-- Loop Set 1 -->
                     @foreach ($row2 as $card)
-                        <div class="w-[310px] sm:w-[360px] lg:w-[390px] flex-shrink-0 rounded-2xl sm:rounded-3xl p-6 sm:p-7 bg-white border border-brand-divider shadow-xs hover:border-brand/40 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                        <div class="w-[280px] sm:w-[350px] lg:w-[390px] flex-shrink-0 rounded-2xl sm:rounded-3xl p-6 sm:p-7 bg-white border border-brand-divider shadow-xs hover:border-brand/40 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
                             <div>
                                 <!-- Quote Icon -->
                                 <div class="w-10 h-10 rounded-xl bg-brand-light flex items-center justify-center text-brand mb-4">
@@ -212,7 +212,7 @@
 
                     <!-- Loop Set 2 (Identical for Seamless Loop) -->
                     @foreach ($row2 as $card)
-                        <div class="w-[310px] sm:w-[360px] lg:w-[390px] flex-shrink-0 rounded-2xl sm:rounded-3xl p-6 sm:p-7 bg-white border border-brand-divider shadow-xs hover:border-brand/40 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                        <div class="w-[280px] sm:w-[350px] lg:w-[390px] flex-shrink-0 rounded-2xl sm:rounded-3xl p-6 sm:p-7 bg-white border border-brand-divider shadow-xs hover:border-brand/40 hover:shadow-md transition-all duration-300 flex flex-col justify-between">
                             <div>
                                 <!-- Quote Icon -->
                                 <div class="w-10 h-10 rounded-xl bg-brand-light flex items-center justify-center text-brand mb-4">
