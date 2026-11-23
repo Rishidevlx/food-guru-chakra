@@ -1,244 +1,248 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="bg-white min-h-screen pt-28 sm:pt-36 lg:pt-40 pb-20 sm:pb-28 relative overflow-hidden">
+<!-- =====================================================================
+     CONTACT HERO & 2-COLUMN SECTION (Left: Contact Info | Right: Form)
+====================================================================== -->
+<section class="bg-white pt-28 sm:pt-36 lg:pt-40 pb-16 sm:pb-24 relative">
     
-    <!-- Ambient subtle background accent glows -->
-    <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-secondary-bg/60 blur-3xl pointer-events-none -z-0"></div>
-    <div class="absolute top-1/2 -right-32 w-96 h-96 rounded-full bg-brand-light/50 blur-3xl pointer-events-none -z-0"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- 2-Column Responsive Grid with Vertical Half-Line Divider -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start relative">
 
-        <!-- =====================================================================
-             1. HEADER ABOVE CARD: 2-Line Content with Section Heading
-        ====================================================================== -->
-        <div class="text-center max-w-2xl mx-auto mb-12 sm:mb-16 reveal-on-scroll">
-            <span class="inline-block text-xs font-semibold uppercase tracking-widest text-brand-dark mb-2.5">
-                GET IN TOUCH
-            </span>
-
-            <h1 class="font-heading font-normal text-2xl sm:text-3xl lg:text-4xl text-brand-dark tracking-tight mb-3 sm:mb-4 leading-tight">
-                Connect With Our Advisory Team
-            </h1>
-
-            <p class="font-body text-[13px] sm:text-[15px] lg:text-[16px] text-brand-muted leading-relaxed font-normal">
-                Have questions about food safety compliance, audits, kitchen workflow optimization, or SHAKTHI™ training?
-                Reach out to our specialized advisory team in Coimbatore.
-            </p>
-        </div>
-
-        <!-- =====================================================================
-             2. SPLIT CONTACT CARD CONTAINER (Matching Uploaded Reference Design)
-             - Left: Stylized Map Background + Contact Details
-             - Right: Brand Green Form with Speech Bubble Notch
-        ====================================================================== -->
-        <div class="rounded-3xl overflow-hidden shadow-2xl border border-brand-divider bg-white grid grid-cols-1 lg:grid-cols-12 max-w-5xl mx-auto reveal-on-scroll delay-100">
-
-            <!-- LEFT COLUMN: Map Background + "Let's get in touch" Info -->
-            <div class="lg:col-span-6 relative p-8 sm:p-10 lg:p-12 flex flex-col justify-between overflow-hidden bg-[#FAFBF9]">
+            <!-- =====================================================================
+                 LEFT COLUMN: "Let's Get In Touch" + Clean Static Cards (Minimal Radius)
+            ====================================================================== -->
+            <div class="lg:col-span-5 flex flex-col justify-start relative lg:pr-10 xl:pr-12 reveal-on-scroll">
                 
-                <!-- Stylized Street Map Vector Pattern Overlay -->
-                <div class="absolute inset-0 pointer-events-none opacity-20 select-none -z-0">
-                    <svg width="100%" height="100%" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full object-cover">
-                        <!-- Grid Street Lines -->
-                        <path d="M0 80 H600 M0 180 H600 M0 300 H600 M0 420 H600 M0 520 H600" stroke="#09332E" stroke-width="3" stroke-dasharray="6 4" />
-                        <path d="M80 0 V600 M200 0 V600 M320 0 V600 M450 0 V600 M550 0 V600" stroke="#09332E" stroke-width="3" stroke-dasharray="6 4" />
-                        <!-- Diagonal Main Roads -->
-                        <path d="M-50 150 L650 450" stroke="#09332E" stroke-width="6" />
-                        <path d="M120 -50 L450 650" stroke="#09332E" stroke-width="5" />
-                        <!-- Decorative Blocks -->
-                        <rect x="100" y="200" width="80" height="80" fill="#256F45" fill-opacity="0.1" />
-                        <rect x="220" y="320" width="80" height="80" fill="#256F45" fill-opacity="0.1" />
-                        <rect x="340" y="100" width="90" height="60" fill="#E6A122" fill-opacity="0.1" />
-                    </svg>
-                </div>
+                <span class="inline-block text-xs font-semibold uppercase tracking-widest text-brand mb-2.5">
+                    GET IN TOUCH
+                </span>
 
-                <!-- Content Layer (Above Map) -->
-                <div class="relative z-10">
-                    <!-- Heading -->
-                    <h2 class="font-heading font-normal text-2xl sm:text-3xl text-brand-dark mb-2.5 tracking-tight">
-                        Let&rsquo;s get in touch
-                    </h2>
+                <h1 class="font-heading font-normal text-3xl sm:text-4xl lg:text-[42px] text-brand-dark tracking-tight mb-3 leading-tight">
+                    Let&rsquo;s Get In Touch
+                </h1>
 
-                    <!-- Subtext -->
-                    <p class="font-body text-xs sm:text-sm text-brand-muted leading-relaxed mb-8 sm:mb-10 max-w-sm">
-                        We&rsquo;re open for any inquiry, audit consultation, or just to have a chat about your food operations.
-                    </p>
+                <p class="font-body text-xs sm:text-sm text-neutral-600 leading-relaxed mb-7 max-w-md">
+                    We are open for any inquiry, food safety audit consultation, kitchen workflow assessment, or advisory discussion regarding your facility.
+                </p>
 
-                    <!-- Contact Details List with Clean Outline Icons -->
-                    <div class="space-y-6 sm:space-y-7">
-                        
-                        <!-- Phone Numbers -->
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-xl bg-white border border-brand-divider text-brand flex items-center justify-center flex-shrink-0 shadow-xs">
-                                <x-lucide-phone-call class="w-5 h-5 text-brand" />
-                            </div>
-                            <div class="flex flex-col font-body text-xs sm:text-sm text-brand-dark">
-                                <a href="tel:+919442054000" class="hover:text-brand font-medium transition-colors">
-                                    +91 94420 54000
-                                </a>
-                                <a href="tel:+919876543210" class="hover:text-brand font-medium transition-colors mt-0.5">
-                                    +91 98765 43210
-                                </a>
-                            </div>
+                <!-- Stacked 3 Clean White Cards (Minimal Radius, No Hover Effect, Clean Data) -->
+                <div class="space-y-3.5 w-full">
+
+                    <!-- CARD 1: Quick Call -->
+                    <div class="p-4 rounded-lg bg-white border border-brand-divider shadow-2xs flex items-center gap-3.5">
+                        <div class="w-10 h-10 rounded-md bg-brand-light text-brand flex items-center justify-center flex-shrink-0">
+                            <x-lucide-phone class="w-5 h-5 text-brand" />
                         </div>
-
-                        <!-- Email Addresses -->
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-xl bg-white border border-brand-divider text-brand flex items-center justify-center flex-shrink-0 shadow-xs">
-                                <x-lucide-mail class="w-5 h-5 text-brand" />
-                            </div>
-                            <div class="flex flex-col font-body text-xs sm:text-sm text-brand-dark">
-                                <a href="mailto:info@foodguruchakra.com" class="hover:text-brand font-medium transition-colors">
-                                    info@foodguruchakra.com
-                                </a>
-                                <a href="mailto:advisory@foodguruchakra.com" class="hover:text-brand font-medium transition-colors mt-0.5">
-                                    advisory@foodguruchakra.com
-                                </a>
-                            </div>
+                        <div class="flex-1 min-w-0">
+                            <span class="block font-body text-[11px] font-semibold uppercase tracking-wider text-neutral-500 mb-0.5">
+                                Quick Call
+                            </span>
+                            <a href="tel:+917845567089" class="block font-body text-sm sm:text-[15px] font-semibold text-black hover:text-brand-gold transition-colors">
+                                +91 78455 67089
+                            </a>
                         </div>
-
-                        <!-- Headquarters Address -->
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-xl bg-white border border-brand-divider text-brand flex items-center justify-center flex-shrink-0 shadow-xs">
-                                <x-lucide-map-pin class="w-5 h-5 text-brand" />
-                            </div>
-                            <div class="font-body text-xs sm:text-sm text-brand-dark leading-relaxed">
-                                <p class="font-medium text-brand-dark">Food Guru Chakra HQ,</p>
-                                <p class="text-brand-muted">12/4, Avinashi Road, Peelamedu,</p>
-                                <p class="text-brand-muted">Coimbatore, Tamil Nadu — 641004.</p>
-                            </div>
-                        </div>
-
                     </div>
+
+                    <!-- CARD 2: Email Us -->
+                    <div class="p-4 rounded-lg bg-white border border-brand-divider shadow-2xs flex items-center gap-3.5">
+                        <div class="w-10 h-10 rounded-md bg-brand-light text-brand flex items-center justify-center flex-shrink-0">
+                            <x-lucide-mail class="w-5 h-5 text-brand" />
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <span class="block font-body text-[11px] font-semibold uppercase tracking-wider text-neutral-500 mb-0.5">
+                                Email Us
+                            </span>
+                            <a href="mailto:chakramyid@gmail.com" class="block font-body text-sm sm:text-[15px] font-semibold text-black hover:text-brand-gold transition-colors truncate">
+                                chakramyid@gmail.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- CARD 3: Locations (Replaced Headquarters with Locations, Removed Food Guru Chakra name) -->
+                    <div class="p-4 rounded-lg bg-white border border-brand-divider shadow-2xs flex items-start gap-3.5">
+                        <div class="w-10 h-10 rounded-md bg-brand-light text-brand flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <x-lucide-map-pin class="w-5 h-5 text-brand" />
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <span class="block font-body text-[11px] font-semibold uppercase tracking-wider text-neutral-500 mb-1">
+                                Locations
+                            </span>
+                            <p class="font-body text-xs sm:text-[13px] text-neutral-700 leading-relaxed">
+                                Subha Complex, 106 F/ 7, Collector Office Road,<br>
+                                Annai Nagar, Perambalur – 621212, India.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
 
-                <!-- Bottom Status Indicator -->
-                <div class="relative z-10 pt-8 mt-8 border-t border-brand-divider/70 flex items-center gap-2.5 text-xs text-brand-muted font-body">
-                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                    <span>Advisory team active &bull; Monday &ndash; Saturday (9:00 AM &ndash; 6:30 PM IST)</span>
-                </div>
+                <!-- Vertical Half-Line Divider (Between Left and Right Sections on Desktop) -->
+                <div class="hidden lg:block absolute right-0 top-16 bottom-16 w-[1px] bg-brand-divider" aria-hidden="true"></div>
 
             </div>
 
-            <!-- RIGHT COLUMN: Solid Brand Green Form Container with Speech Bubble Notch -->
+            <!-- =====================================================================
+                 RIGHT COLUMN: Clean Borderless Form Layout (Direct on Page)
+            ====================================================================== -->
             <div
                 x-data="{
-                    name: '',
+                    firstName: '',
+                    lastName: '',
                     email: '',
                     phone: '',
                     message: '',
                     submitted: false,
                     handleSubmit() {
-                        if (this.name && this.email && this.message) {
-                            this.submitted = true;
-                        }
+                        this.submitted = true;
                     }
                 }"
-                class="lg:col-span-6 bg-brand text-white p-8 sm:p-10 lg:p-12 relative flex flex-col justify-between"
+                class="lg:col-span-7 lg:pl-6 xl:pl-8 reveal-on-scroll delay-100"
             >
-                <!-- Desktop Speech Bubble Notch pointing to the Left Map Side -->
-                <div
-                    class="hidden lg:block absolute top-12 -left-3.5 w-0 h-0 border-t-[12px] border-t-transparent border-b-[12px] border-b-transparent border-r-[14px] border-r-brand z-20 pointer-events-none"
-                    aria-hidden="true"
-                ></div>
-
-                <!-- Form Heading / State -->
-                <div>
-                    <h3 class="font-heading font-normal text-xl sm:text-2xl text-white mb-2 tracking-tight">
-                        Send a Message
-                    </h3>
-                    <p class="font-body text-xs sm:text-sm text-white/80 leading-relaxed mb-6 sm:mb-8">
-                        Fill in your requirements and our specialists will respond within 24 business hours.
+                <div class="mb-6 sm:mb-8">
+                    <h2 class="font-heading font-normal text-2xl sm:text-3xl text-brand-dark mb-2 tracking-tight">
+                        Send Us a Message
+                    </h2>
+                    <p class="font-body text-xs sm:text-sm text-neutral-600">
+                        Fill in your requirements below and our specialized team will contact you promptly.
                     </p>
-
-                    <!-- Success Feedback State -->
-                    <template x-if="submitted">
-                        <div class="p-6 rounded-2xl bg-white/10 border border-white/20 text-center animate-fadeIn my-6">
-                            <div class="w-12 h-12 rounded-full bg-white text-brand mx-auto flex items-center justify-center mb-3 shadow-md">
-                                <x-lucide-check class="w-6 h-6 stroke-[2.5]" />
-                            </div>
-                            <h4 class="font-heading font-semibold text-lg text-white mb-1">
-                                Thank You!
-                            </h4>
-                            <p class="font-body text-xs sm:text-sm text-white/80 leading-relaxed">
-                                Your message has been received. Our advisory team will contact you shortly.
-                            </p>
-                        </div>
-                    </template>
-
-                    <!-- Interactive Form Inputs -->
-                    <form x-show="!submitted" @submit.prevent="handleSubmit" class="space-y-4 sm:space-y-5">
-                        
-                        <!-- 1. FULL NAME Input with Icon -->
-                        <div class="relative flex items-center border border-white/50 focus-within:border-white focus-within:bg-white/10 rounded-xl px-4 py-3 sm:py-3.5 bg-white/5 transition-all">
-                            <x-lucide-user class="w-5 h-5 text-white/80 mr-3 flex-shrink-0" />
-                            <input
-                                type="text"
-                                x-model="name"
-                                required
-                                placeholder="FULL NAME"
-                                class="w-full bg-transparent text-white placeholder-white/70 text-xs sm:text-sm uppercase tracking-wider font-semibold focus:outline-none"
-                            />
-                        </div>
-
-                        <!-- 2. EMAIL Input with Icon -->
-                        <div class="relative flex items-center border border-white/50 focus-within:border-white focus-within:bg-white/10 rounded-xl px-4 py-3 sm:py-3.5 bg-white/5 transition-all">
-                            <x-lucide-mail class="w-5 h-5 text-white/80 mr-3 flex-shrink-0" />
-                            <input
-                                type="email"
-                                x-model="email"
-                                required
-                                placeholder="EMAIL"
-                                class="w-full bg-transparent text-white placeholder-white/70 text-xs sm:text-sm uppercase tracking-wider font-semibold focus:outline-none"
-                            />
-                        </div>
-
-                        <!-- 3. PHONE / ORGANIZATION Input with Icon -->
-                        <div class="relative flex items-center border border-white/50 focus-within:border-white focus-within:bg-white/10 rounded-xl px-4 py-3 sm:py-3.5 bg-white/5 transition-all">
-                            <x-lucide-building class="w-5 h-5 text-white/80 mr-3 flex-shrink-0" />
-                            <input
-                                type="text"
-                                x-model="phone"
-                                placeholder="PHONE / ORGANIZATION"
-                                class="w-full bg-transparent text-white placeholder-white/70 text-xs sm:text-sm uppercase tracking-wider font-semibold focus:outline-none"
-                            />
-                        </div>
-
-                        <!-- 4. MESSAGE Textarea -->
-                        <div class="relative border border-white/50 focus-within:border-white focus-within:bg-white/10 rounded-xl p-4 bg-white/5 transition-all">
-                            <textarea
-                                rows="4"
-                                x-model="message"
-                                required
-                                placeholder="MESSAGE"
-                                class="w-full bg-transparent text-white placeholder-white/70 text-xs sm:text-sm uppercase tracking-wider font-semibold focus:outline-none resize-none leading-relaxed"
-                            ></textarea>
-                        </div>
-
-                        <!-- Submit Button (Rounded Pill Button matching reference) -->
-                        <div class="pt-2">
-                            <button
-                                type="submit"
-                                class="w-full sm:w-auto px-8 sm:px-10 py-3.5 rounded-full border-2 border-white text-white font-body font-semibold text-xs sm:text-sm uppercase tracking-widest hover:bg-white hover:text-brand transition-all flex items-center justify-center gap-2.5 group cursor-pointer shadow-sm"
-                            >
-                                <span>SEND MESSAGE</span>
-                                <x-lucide-arrow-right class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-                            </button>
-                        </div>
-
-                    </form>
                 </div>
 
-                <!-- Privacy Assurance Note -->
-                <p class="font-body text-[11px] text-white/70 mt-6 sm:mt-8">
-                    We respect your privacy. All details shared are protected under strict commercial confidentiality and NDA.
-                </p>
+                <!-- Success Alert Banner -->
+                <template x-if="submitted">
+                    <div class="p-6 sm:p-8 rounded-2xl bg-brand-light/60 border border-brand/20 shadow-sm text-center mb-8 animate-fadeIn">
+                        <div class="w-12 h-12 rounded-full bg-brand text-white mx-auto flex items-center justify-center mb-3 shadow-sm">
+                            <x-lucide-check class="w-6 h-6 stroke-[2.5]" />
+                        </div>
+                        <h3 class="font-heading font-normal text-xl sm:text-2xl text-brand-dark mb-1">
+                            Thank you for reaching out!
+                        </h3>
+                        <p class="font-body text-xs sm:text-sm text-neutral-600 leading-relaxed max-w-md mx-auto">
+                            Your inquiry has been received. Our team will get back to you shortly.
+                        </p>
+                    </div>
+                </template>
 
+                <!-- Form: 3 Balanced Rows with Pure Black Labels (No Outer Card Border) -->
+                <form x-show="!submitted" @submit.prevent="handleSubmit" class="space-y-5 sm:space-y-6">
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
+                        
+                        <!-- ROW 1, COL 1: First Name -->
+                        <div>
+                            <label class="block font-body text-xs font-semibold text-black mb-2">
+                                First Name
+                            </label>
+                            <div class="relative flex items-center bg-[#FAF9F5] border border-[#E5E2D9] rounded-xl px-3.5 py-3 sm:py-3.5 focus-within:bg-white focus-within:border-brand focus-within:ring-1 focus-within:ring-brand shadow-2xs transition-all">
+                                <x-lucide-user class="w-4 h-4 text-neutral-500 mr-2.5 flex-shrink-0" />
+                                <input
+                                    type="text"
+                                    x-model="firstName"
+                                    placeholder="Enter your first name..."
+                                    class="w-full bg-transparent text-xs sm:text-sm font-body text-black placeholder-neutral-400 focus:outline-none"
+                                />
+                            </div>
+                        </div>
+
+                        <!-- ROW 1, COL 2: Last Name -->
+                        <div>
+                            <label class="block font-body text-xs font-semibold text-black mb-2">
+                                Last Name
+                            </label>
+                            <div class="relative flex items-center bg-[#FAF9F5] border border-[#E5E2D9] rounded-xl px-3.5 py-3 sm:py-3.5 focus-within:bg-white focus-within:border-brand focus-within:ring-1 focus-within:ring-brand shadow-2xs transition-all">
+                                <x-lucide-user class="w-4 h-4 text-neutral-500 mr-2.5 flex-shrink-0" />
+                                <input
+                                    type="text"
+                                    x-model="lastName"
+                                    placeholder="Enter your last name..."
+                                    class="w-full bg-transparent text-xs sm:text-sm font-body text-black placeholder-neutral-400 focus:outline-none"
+                                />
+                            </div>
+                        </div>
+
+                        <!-- ROW 2, COL 1: Email Address -->
+                        <div>
+                            <label class="block font-body text-xs font-semibold text-black mb-2">
+                                Email Address
+                            </label>
+                            <div class="relative flex items-center bg-[#FAF9F5] border border-[#E5E2D9] rounded-xl px-3.5 py-3 sm:py-3.5 focus-within:bg-white focus-within:border-brand focus-within:ring-1 focus-within:ring-brand shadow-2xs transition-all">
+                                <x-lucide-mail class="w-4 h-4 text-neutral-500 mr-2.5 flex-shrink-0" />
+                                <input
+                                    type="email"
+                                    x-model="email"
+                                    placeholder="Enter your email address..."
+                                    class="w-full bg-transparent text-xs sm:text-sm font-body text-black placeholder-neutral-400 focus:outline-none"
+                                />
+                            </div>
+                        </div>
+
+                        <!-- ROW 2, COL 2: Mobile Number -->
+                        <div>
+                            <label class="block font-body text-xs font-semibold text-black mb-2">
+                                Mobile Number
+                            </label>
+                            <div class="relative flex items-center bg-[#FAF9F5] border border-[#E5E2D9] rounded-xl px-3.5 py-3 sm:py-3.5 focus-within:bg-white focus-within:border-brand focus-within:ring-1 focus-within:ring-brand shadow-2xs transition-all">
+                                <x-lucide-phone class="w-4 h-4 text-neutral-500 mr-2.5 flex-shrink-0" />
+                                <input
+                                    type="tel"
+                                    x-model="phone"
+                                    placeholder="Enter your mobile number..."
+                                    class="w-full bg-transparent text-xs sm:text-sm font-body text-black placeholder-neutral-400 focus:outline-none"
+                                />
+                            </div>
+                        </div>
+
+                        <!-- ROW 3: Message (Full Width Across Columns) -->
+                        <div class="sm:col-span-2">
+                            <label class="block font-body text-xs font-semibold text-black mb-2">
+                                Message
+                            </label>
+                            <div class="relative flex items-start bg-[#FAF9F5] border border-[#E5E2D9] rounded-xl p-3.5 sm:p-4 focus-within:bg-white focus-within:border-brand focus-within:ring-1 focus-within:ring-brand shadow-2xs transition-all">
+                                <x-lucide-message-square class="w-4 h-4 text-neutral-500 mr-2.5 mt-1 flex-shrink-0" />
+                                <textarea
+                                    rows="4"
+                                    x-model="message"
+                                    placeholder="Enter your message here..."
+                                    class="w-full bg-transparent text-xs sm:text-sm font-body text-black placeholder-neutral-400 focus:outline-none resize-none leading-relaxed"
+                                ></textarea>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- ROW 4: Action Submit Button with Send Icon -->
+                    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+                        <p class="font-body text-[11px] text-neutral-500 order-2 sm:order-1 text-center sm:text-left">
+                            We respect your privacy. All information is kept strictly confidential.
+                        </p>
+
+                        <button
+                            type="submit"
+                            class="w-full sm:w-auto px-8 sm:px-10 py-3 sm:py-3.5 rounded-lg bg-[#09332E] hover:bg-brand text-white font-body font-semibold text-xs sm:text-sm tracking-wide transition-all inline-flex items-center justify-center gap-2 group cursor-pointer shadow-sm hover:shadow-md order-1 sm:order-2"
+                        >
+                            <span>Submit Form</span>
+                            <x-lucide-send class="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                        </button>
+                    </div>
+
+                </form>
             </div>
 
         </div>
 
     </div>
-</div>
+
+</section>
+
+<!-- =====================================================================
+     4. TESTIMONIALS COMPONENT (Same as Home Page)
+====================================================================== -->
+<x-testimonials />
+
+<!-- =====================================================================
+     5. FAQ COMPONENT (Same as Home Page)
+====================================================================== -->
+<x-faq />
 @endsection

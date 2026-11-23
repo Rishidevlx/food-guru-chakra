@@ -18,7 +18,7 @@ Any change made in this single file automatically reflects across all Blade view
         /* ------------------------------------------------------------- */
         /* [A] COLOR PALETTE - CENTRAL CONTROL ROOM                      */
         /* ------------------------------------------------------------- */
-        --theme-text-main: #09332E;          /* Primary Dark Pine / Teal Text */
+        --theme-text-main: #09332E;          /* Signature Dark Pine Green for Headings & Footer */
         --theme-bg-primary: #FFFFFF;         /* Primary Background (White) */
         --theme-bg-secondary: #256F45;       /* Brand Green */
         --theme-bg-secondary-dark: #1C5535;  /* Brand Green Hover */
@@ -26,14 +26,14 @@ Any change made in this single file automatically reflects across all Blade view
         --theme-bg-secondary-bg: #EEF6EF;    /* Secondary Section Background (#EEF6EF) */
         
         /* Accents */
-        --theme-accent-gold: #E6A122;        /* Gold Highlight / Accent */
+        --theme-accent-gold: #C59325;        /* Rich Metallic Gold Accent for Links & Highlights */
         --theme-accent-red: #F4320B;         /* Warm Red Accent */
         --theme-accent-blue: #0B51F4;        /* Royal Blue Accent */
 
         /* Borders & Muted Tones */
         --theme-border-light: #E8EFEA;
         --theme-border-divider: #E2EBE8;
-        --theme-text-muted: #526963;
+        --theme-text-muted: #333333;         /* Deep Charcoal for High-Contrast Body Text */
 
         /* ------------------------------------------------------------- */
         /* [B] TYPOGRAPHY SYSTEM (Poppins for body, Libre Baskerville for headings) */

@@ -1,7 +1,6 @@
 <section id="testimonials" class="py-14 sm:py-20 lg:py-24 bg-white text-brand-dark relative overflow-hidden">
     
-    <!-- Ambient subtle background glow -->
-    <div class="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-brand-light/50 blur-3xl pointer-events-none"></div>
+    <!-- Ambient subtle background glow (Top-left shade removed) -->
     <div class="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-brand-light/40 blur-3xl pointer-events-none"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mb-8 sm:mb-10 lg:mb-12">

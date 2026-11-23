@@ -18,40 +18,40 @@
                 Explore FOOD GURU CHAKRA™
             </h3>
             <div class="flex flex-wrap items-center gap-x-4 gap-y-2.5 font-body text-xs sm:text-sm text-brand-muted">
-                <a href="/" class="hover:text-brand transition-colors flex items-center gap-2">
+                <a href="/" class="hover:text-brand-gold transition-colors flex items-center gap-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Home
                 </a>
-                <a href="#about" class="hover:text-brand transition-colors flex items-center gap-2">
+                <a href="#about" class="hover:text-brand-gold transition-colors flex items-center gap-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> About Us
                 </a>
-                <a href="{{ route('contact') }}" class="hover:text-brand transition-colors flex items-center gap-2">
+                <a href="{{ route('contact') }}" class="hover:text-brand-gold transition-colors flex items-center gap-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Contact Us
                 </a>
-                <a href="#services" class="hover:text-brand transition-colors flex items-center gap-2">
+                <a href="#services" class="hover:text-brand-gold transition-colors flex items-center gap-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Service Pillars
                 </a>
-                <a href="#industries" class="hover:text-brand transition-colors flex items-center gap-2">
+                <a href="#industries" class="hover:text-brand-gold transition-colors flex items-center gap-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Industries We Serve
                 </a>
-                <a href="#expertise" class="hover:text-brand transition-colors flex items-center gap-2">
+                <a href="#expertise" class="hover:text-brand-gold transition-colors flex items-center gap-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Areas of Expertise
                 </a>
-                <a href="#why-us" class="hover:text-brand transition-colors flex items-center gap-2">
+                <a href="#why-us" class="hover:text-brand-gold transition-colors flex items-center gap-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Why Choose Us
                 </a>
-                <a href="#shakthi" class="hover:text-brand transition-colors flex items-center gap-2">
+                <a href="#shakthi" class="hover:text-brand-gold transition-colors flex items-center gap-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> SHAKTHI™ Initiative
                 </a>
-                <a href="#testimonials" class="hover:text-brand transition-colors flex items-center gap-2">
+                <a href="#testimonials" class="hover:text-brand-gold transition-colors flex items-center gap-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Client Testimonials
                 </a>
-                <a href="#faq" class="hover:text-brand transition-colors flex items-center gap-2">
+                <a href="#faq" class="hover:text-brand-gold transition-colors flex items-center gap-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> FAQ
                 </a>
-                <a href="{{ route('privacy-policy') }}" class="hover:text-brand transition-colors flex items-center gap-2">
+                <a href="{{ route('privacy-policy') }}" class="hover:text-brand-gold transition-colors flex items-center gap-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Privacy Policy
                 </a>
-                <a href="{{ route('terms-and-conditions') }}" class="hover:text-brand transition-colors flex items-center gap-2">
+                <a href="{{ route('terms-and-conditions') }}" class="hover:text-brand-gold transition-colors flex items-center gap-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Terms & Conditions
                 </a>
             </div>
@@ -164,17 +164,17 @@
                     Get In Touch
                 </h4>
                 <div class="space-y-3 font-body text-xs sm:text-[13px] text-white/80 mb-6">
-                    <a href="tel:+919876543210" class="flex items-center gap-2 hover:text-brand-gold transition-colors">
+                    <a href="tel:+917845567089" class="flex items-center gap-2 hover:text-brand-gold transition-colors">
                         <x-lucide-phone class="w-4 h-4 text-brand-gold flex-shrink-0" />
-                        <span>+91 98765 43210</span>
+                        <span>+91 78455 67089</span>
                     </a>
-                    <a href="https://wa.me/919876543210" target="_blank" class="flex items-center gap-2 hover:text-brand-gold transition-colors">
+                    <a href="https://wa.me/917845567089" target="_blank" class="flex items-center gap-2 hover:text-brand-gold transition-colors">
                         <x-lucide-message-circle class="w-4 h-4 text-[#25D366] flex-shrink-0" />
-                        <span>+91 98765 43210</span>
+                        <span>+91 78455 67089</span>
                     </a>
-                    <a href="mailto:info@foodguruchakra.com" class="flex items-center gap-2 hover:text-brand-gold transition-colors">
+                    <a href="mailto:chakramyid@gmail.com" class="flex items-center gap-2 hover:text-brand-gold transition-colors">
                         <x-lucide-mail class="w-4 h-4 text-brand-gold flex-shrink-0" />
-                        <span>info@foodguruchakra.com</span>
+                        <span>chakramyid@gmail.com</span>
                     </a>
                 </div>
 
@@ -208,13 +208,13 @@
                     <div>
                         <div class="flex items-center gap-2 text-brand-gold mb-3 font-semibold text-xs sm:text-sm">
                             <x-lucide-map-pin class="w-4 h-4 text-brand-gold flex-shrink-0" />
-                            <span>Coimbatore (HQ)</span>
+                            <span>Perambalur (HQ)</span>
                         </div>
 
                         <p class="font-body text-xs sm:text-[13px] text-white/75 leading-relaxed mb-4">
-                            Food Guru Chakra HQ,<br>
-                            Avinashi Road, Peelamedu,<br>
-                            Coimbatore, Tamil Nadu — 641004.
+                            Subha Complex, 106 F/ 7,<br>
+                            Collector Office Road, Annai Nagar,<br>
+                            Perambalur – 621212, India.
                         </p>
                     </div>
 

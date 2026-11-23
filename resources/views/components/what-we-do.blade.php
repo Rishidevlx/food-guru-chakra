@@ -27,7 +27,7 @@
                     </div>
 
                     <!-- Title -->
-                    <h3 class="font-heading font-normal text-xl sm:text-2xl text-brand-dark group-hover:text-brand transition-colors duration-300 mb-2.5 sm:mb-3">
+                    <h3 class="font-heading font-normal text-xl sm:text-2xl text-brand-dark group-hover:text-brand-gold transition-colors duration-300 mb-2.5 sm:mb-3">
                         Consultancy
                     </h3>
 
@@ -39,7 +39,7 @@
 
                 <!-- Bottom Row: Text on Left + Circular Arrow on Right with Bottom-Fill Effect -->
                 <div class="pt-6 border-t border-brand-border flex items-center justify-between">
-                    <span class="font-body font-semibold text-sm sm:text-[15px] text-brand-dark group-hover:text-brand transition-colors duration-300">
+                    <span class="font-body font-semibold text-sm sm:text-[15px] text-brand-dark group-hover:text-brand-gold transition-colors duration-300">
                         Explore Consultancy
                     </span>
 
@@ -63,7 +63,7 @@
                     </div>
 
                     <!-- Title -->
-                    <h3 class="font-heading font-normal text-xl sm:text-2xl text-brand-dark group-hover:text-brand transition-colors duration-300 mb-2.5 sm:mb-3">
+                    <h3 class="font-heading font-normal text-xl sm:text-2xl text-brand-dark group-hover:text-brand-gold transition-colors duration-300 mb-2.5 sm:mb-3">
                         Training
                     </h3>
 
@@ -75,7 +75,7 @@
 
                 <!-- Bottom Row: Text on Left + Circular Arrow on Right with Bottom-Fill Effect -->
                 <div class="pt-6 border-t border-brand-border flex items-center justify-between">
-                    <span class="font-body font-semibold text-sm sm:text-[15px] text-brand-dark group-hover:text-brand transition-colors duration-300">
+                    <span class="font-body font-semibold text-sm sm:text-[15px] text-brand-dark group-hover:text-brand-gold transition-colors duration-300">
                         Explore Training
                     </span>
 
@@ -99,7 +99,7 @@
                     </div>
 
                     <!-- Title -->
-                    <h3 class="font-heading font-normal text-xl sm:text-2xl text-brand-dark group-hover:text-brand transition-colors duration-300 mb-2.5 sm:mb-3">
+                    <h3 class="font-heading font-normal text-xl sm:text-2xl text-brand-dark group-hover:text-brand-gold transition-colors duration-300 mb-2.5 sm:mb-3">
                         Certification Support
                     </h3>
 
@@ -111,7 +111,7 @@
 
                 <!-- Bottom Row: Text on Left + Circular Arrow on Right with Bottom-Fill Effect -->
                 <div class="pt-6 border-t border-brand-border flex items-center justify-between">
-                    <span class="font-body font-semibold text-sm sm:text-[15px] text-brand-dark group-hover:text-brand transition-colors duration-300">
+                    <span class="font-body font-semibold text-sm sm:text-[15px] text-brand-dark group-hover:text-brand-gold transition-colors duration-300">
                         Explore Certification Support
                     </span>
 
