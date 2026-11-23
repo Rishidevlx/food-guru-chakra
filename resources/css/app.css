@@ -1,0 +1,98 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-heading: 'Libre Baskerville', serif;
+    --font-body: 'Poppins', sans-serif;
+
+    /* Semantic Brand Colors linked to theme.blade.php CSS variables */
+    --color-brand: var(--theme-bg-secondary);
+    --color-brand-dark: var(--theme-text-main);
+    --color-brand-hover: var(--theme-bg-secondary-dark);
+    --color-brand-light: var(--theme-bg-secondary-light);
+    --color-brand-gold: var(--theme-accent-gold);
+    --color-brand-border: var(--theme-border-light);
+    --color-brand-divider: var(--theme-border-divider);
+    --color-brand-muted: var(--theme-text-muted);
+    --color-secondary-bg: var(--theme-bg-secondary-bg);
+}
+
+/* ⭐ SMOOTH VELOCITY TICKER / INFINITE MARQUEE */
+@keyframes marquee-scroll {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes marquee-scroll-reverse {
+    0% { transform: translate3d(-50%, 0, 0); }
+    100% { transform: translate3d(0, 0, 0); }
+}
+
+.animate-marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 35s linear infinite;
+    will-change: transform;
+}
+
+.animate-marquee:hover {
+    animation-play-state: paused;
+}
+
+.animate-marquee-reverse {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll-reverse 35s linear infinite;
+    will-change: transform;
+}
+
+.animate-marquee-reverse:hover {
+    animation-play-state: paused;
+}
+
+/* 3D Perspective Flip Utilities */
+.perspective-1000 {
+    perspective: 1000px;
+}
+
+.preserve-3d {
+    transform-style: preserve-3d;
+}
+
+.backface-hidden {
+    backface-visibility: hidden;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* ⭐ SMOOTH SCROLL REVEAL ANIMATIONS */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger Delay Utilities */
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+.delay-600 { transition-delay: 600ms; }
