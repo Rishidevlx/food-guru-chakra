@@ -56,7 +56,7 @@ COPY . .
 RUN composer install --no-dev --optimize-autoloader --no-interaction --prefer-dist
 
 # 9. Install Node Dependencies & Build Vite Assets (Tailwind v4)
-RUN npm install && npm run build && rm -rf node_modules
+RUN npm install --include=dev && npm run build
 
 # 10. Configure Directory Permissions for Storage and Cache
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache \
