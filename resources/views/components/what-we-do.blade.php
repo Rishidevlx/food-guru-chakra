@@ -17,7 +17,7 @@
 
             <!-- CARD 1: Consultancy -->
             <a
-                href="#contact"
+                href="{{ route('contact') }}"
                 class="reveal-on-scroll delay-100 group relative bg-white border border-brand/35 hover:border-brand rounded-2xl p-6 sm:p-8 lg:p-9 transition-all duration-300 hover:shadow-xl flex flex-col justify-between cursor-pointer"
             >
                 <div>
@@ -53,7 +53,7 @@
 
             <!-- CARD 2: Training -->
             <a
-                href="#contact"
+                href="{{ route('contact') }}"
                 class="reveal-on-scroll delay-200 group relative bg-white border border-brand/35 hover:border-brand rounded-2xl p-6 sm:p-8 lg:p-9 transition-all duration-300 hover:shadow-xl flex flex-col justify-between cursor-pointer"
             >
                 <div>
@@ -89,7 +89,7 @@
 
             <!-- CARD 3: Certification Support -->
             <a
-                href="#contact"
+                href="{{ route('contact') }}"
                 class="reveal-on-scroll delay-300 group relative bg-white border border-brand/35 hover:border-brand rounded-2xl p-6 sm:p-8 lg:p-9 transition-all duration-300 hover:shadow-xl flex flex-col justify-between cursor-pointer"
             >
                 <div>

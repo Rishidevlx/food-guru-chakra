@@ -3,7 +3,7 @@
 @section('content')
 <!-- 1. HERO SECTION (Full hero.png Background with Transparent Navbar) -->
 <section
-    class="relative text-brand-dark pt-32 sm:pt-36 lg:pt-40 pb-8 sm:pb-14 lg:pb-20 min-h-[82vh] lg:min-h-[90vh] flex items-center overflow-hidden bg-cover bg-center bg-no-repeat"
+    class="relative text-brand-dark pt-24 sm:pt-28 lg:pt-36 pb-8 sm:pb-14 lg:pb-20 min-h-[75vh] lg:min-h-[90vh] flex items-center overflow-hidden bg-cover bg-center bg-no-repeat"
     style="background-image: url('{{ asset('assets/bg/hero.png') }}');"
 >
     <!-- Subtle gradient overlay to ensure text contrast while displaying full hero.png graphic -->
@@ -15,9 +15,9 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-8 items-center">
 
             <!-- LEFT COLUMN: Content, 3D Buttons & Core Pillars (Smooth Scroll Reveal) -->
-            <div class="lg:col-span-7 flex flex-col items-start text-left reveal-on-scroll mt-2 sm:mt-0">
+            <div class="lg:col-span-7 flex flex-col items-start text-left reveal-on-scroll">
 
-                <!-- 1. Main Headline (Compact on Mobile with Generous Navbar Clearance) -->
+                <!-- 1. Main Headline (Compact on Mobile with Minimal Navbar Gap) -->
                 <h1 class="font-heading font-normal text-[21px] sm:text-[26px] lg:text-[32px] xl:text-[36px] leading-[1.25] text-brand-dark tracking-tight mb-3 sm:mb-4 max-w-2xl">
                     Quality, Safety & Compliance You Can Trust
                 </h1>
@@ -40,7 +40,7 @@
                     </x-button>
 
                     <!-- Outlined Button -->
-                    <x-button variant="outlined" href="#contact">
+                    <x-button variant="outlined" href="{{ route('contact') }}">
                         <x-slot:icon>
                             <x-lucide-arrow-right class="w-3.5 h-3.5 sm:w-4 sm:h-4 inline" />
                         </x-slot:icon>

@@ -42,7 +42,10 @@
     ];
 @endphp
 
-<div class="relative w-full max-w-[190px] sm:max-w-[260px] md:max-w-[340px] lg:max-w-[480px] aspect-square mx-auto flex items-center justify-center p-1 sm:p-2 select-none">
+<div
+    x-data="{ activeSlice: null }"
+    class="relative w-full max-w-[240px] sm:max-w-[290px] md:max-w-[360px] lg:max-w-[480px] aspect-square mx-auto flex items-center justify-center p-1 sm:p-2 select-none"
+>
     
     <!-- Decorative Outer Glow Ring using CSS variable -->
     <div class="absolute inset-4 rounded-full bg-gradient-to-tr from-brand/12 via-brand-dark/5 to-brand-gold/10 blur-xl -z-10"></div>
@@ -71,14 +74,17 @@
             </filter>
         </defs>
 
-        <!-- Slices Group (Wedge images with hover effect) -->
+        <!-- Slices Group (Wedge images with hover effect + mobile click trigger) -->
         @foreach ($sliceImages as $i => $imgUrl)
             @php
                 $startAngle = $i * $sliceSpan + $gapDeg / 2;
                 $endAngle = ($i + 1) * $sliceSpan - $gapDeg / 2;
                 $pathData = getSectorPath($cx, $cy, $rInner, $rOuter, $startAngle, $endAngle);
             @endphp
-            <g class="cursor-pointer transition-all duration-300 hover:opacity-95">
+            <g
+                @click="activeSlice = (activeSlice === {{ $i }} ? null : {{ $i }})"
+                class="cursor-pointer transition-all duration-300 hover:opacity-95"
+            >
                 <image
                     href="{{ $imgUrl }}"
                     x="0"
@@ -87,13 +93,17 @@
                     height="500"
                     preserveAspectRatio="xMidYMid slice"
                     clip-path="url(#chakra-slice-{{ $i }})"
+                    :class="activeSlice === {{ $i }} ? 'scale-105 filter brightness-105' : ''"
                     class="transition-transform duration-500 hover:scale-105 origin-center"
                 />
                 <path
                     d="{{ $pathData }}"
                     fill="none"
+                    :stroke="activeSlice === {{ $i }} ? 'var(--theme-accent-gold)' : '#FFFFFF'"
+                    :stroke-width="activeSlice === {{ $i }} ? '3.5' : '2.5'"
                     stroke="#FFFFFF"
                     stroke-width="2.5"
+                    class="transition-all duration-300"
                 ></path>
             </g>
         @endforeach

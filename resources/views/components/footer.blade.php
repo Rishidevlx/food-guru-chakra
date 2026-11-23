@@ -24,6 +24,9 @@
                 <a href="#about" class="hover:text-brand transition-colors flex items-center gap-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> About Us
                 </a>
+                <a href="{{ route('contact') }}" class="hover:text-brand transition-colors flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Contact Us
+                </a>
                 <a href="#services" class="hover:text-brand transition-colors flex items-center gap-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Service Pillars
                 </a>

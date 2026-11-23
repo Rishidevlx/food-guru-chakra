@@ -68,7 +68,7 @@
 
                 <!-- 4. Outlined Action Button with Staggered Delay -->
                 <div class="reveal-on-scroll delay-500">
-                    <x-button variant="outlined" href="#contact">
+                    <x-button variant="outlined" href="{{ route('contact') }}">
                         <x-slot:icon>
                             <x-lucide-arrow-right class="w-4 h-4 inline" />
                         </x-slot:icon>

@@ -27,7 +27,7 @@
                         ['name' => 'Training', 'url' => '/#training'],
                         ['name' => 'SHAKTHI', 'url' => '/#shakthi'],
                         ['name' => 'Blog', 'url' => '/#blog'],
-                        ['name' => 'Contact Us', 'url' => '/#contact'],
+                        ['name' => 'Contact Us', 'url' => '/contact'],
                     ];
                 @endphp
 
@@ -70,7 +70,7 @@
         </div>
     </div>
 
-    <!-- 4. FULL-SCREEN MOBILE NAVIGATION OVERLAY (Smooth 60fps Animation) -->
+    <!-- 4. FULL-SCREEN MOBILE NAVIGATION OVERLAY (Smooth 60fps Animation, Compact for all screen sizes) -->
     <div
         x-show="mobileOpen"
         x-cloak
@@ -81,15 +81,15 @@
         x-transition:leave-start="opacity-100 translate-y-0 scale-100"
         x-transition:leave-end="opacity-0 -translate-y-4 scale-98"
         x-effect="document.body.classList.toggle('overflow-hidden', mobileOpen)"
-        class="fixed inset-0 z-[100] bg-white flex flex-col justify-between p-6 sm:p-8 min-h-screen overflow-y-auto lg:hidden"
+        class="fixed inset-0 z-[100] bg-white flex flex-col justify-between p-4 sm:p-6 min-h-screen overflow-y-auto lg:hidden"
     >
-        <!-- Top Bar: Logo & Close Button -->
-        <div class="flex items-center justify-between pb-5 border-b border-brand-divider flex-shrink-0">
+        <!-- Top Bar: Logo & Close Button (Compact) -->
+        <div class="flex items-center justify-between pb-3 sm:pb-4 border-b border-brand-divider flex-shrink-0">
             <a href="/" @click="mobileOpen = false" class="flex items-center focus:outline-none">
                 <img
                     src="{{ asset('assets/logo/logo.png') }}"
                     alt="FOOD GURU CHAKRA Logo"
-                    class="h-12 sm:h-14 w-auto object-contain"
+                    class="h-9 sm:h-11 w-auto object-contain"
                 />
             </a>
 
@@ -97,37 +97,37 @@
             <button
                 type="button"
                 @click="mobileOpen = false"
-                class="w-11 h-11 rounded-full bg-brand-light text-brand-dark hover:bg-brand hover:text-white flex items-center justify-center transition-all duration-200 focus:outline-none cursor-pointer"
+                class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-brand-light text-brand-dark hover:bg-brand hover:text-white flex items-center justify-center transition-all duration-200 focus:outline-none cursor-pointer"
                 aria-label="Close navigation menu"
             >
-                <x-lucide-x class="w-6 h-6" />
+                <x-lucide-x class="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
         </div>
 
-        <!-- Navigation Links: Full-Screen Elegant Typography -->
-        <nav class="my-auto py-6 space-y-1">
+        <!-- Navigation Links: Compact Proportionate Typography -->
+        <nav class="my-auto py-2 sm:py-4 space-y-0.5 sm:space-y-1">
             @foreach ($navLinks as $link)
                 <a
                     href="{{ $link['url'] }}"
                     @click="mobileOpen = false"
-                    class="group flex items-center justify-between py-3.5 px-3 rounded-xl font-heading text-2xl font-normal text-brand-dark hover:text-brand hover:bg-brand-light/50 transition-all duration-200"
+                    class="group flex items-center justify-between py-2 sm:py-2.5 px-3 rounded-lg font-heading text-[16px] sm:text-lg font-normal text-brand-dark hover:text-brand hover:bg-brand-light/50 transition-all duration-200"
                 >
                     <span>{{ $link['name'] }}</span>
-                    <x-lucide-arrow-right class="w-5 h-5 text-brand-muted opacity-40 group-hover:opacity-100 group-hover:text-brand transition-all transform group-hover:translate-x-1" />
+                    <x-lucide-arrow-right class="w-4 h-4 text-brand-muted opacity-40 group-hover:opacity-100 group-hover:text-brand transition-all transform group-hover:translate-x-1" />
                 </a>
             @endforeach
         </nav>
 
-        <!-- Bottom Action CTA -->
-        <div class="pt-5 border-t border-brand-divider space-y-3 flex-shrink-0">
+        <!-- Bottom Action CTA (Compact) -->
+        <div class="pt-3 sm:pt-4 border-t border-brand-divider space-y-2 flex-shrink-0">
             <a
                 href="tel:+919442054000"
-                class="w-full flex items-center justify-center gap-3 py-3.5 rounded-xl bg-brand text-white font-body font-semibold text-base shadow-md hover:bg-brand-hover transition-all"
+                class="w-full flex items-center justify-center gap-2.5 py-2.5 sm:py-3 rounded-xl bg-brand text-white font-body font-semibold text-xs sm:text-sm shadow-sm hover:bg-brand-hover transition-all"
             >
-                <x-lucide-phone-call class="w-5 h-5" />
+                <x-lucide-phone-call class="w-4 h-4" />
                 <span>Quick Call (+91 94420 54000)</span>
             </a>
-            <p class="text-center font-body text-xs text-brand-muted">
+            <p class="text-center font-body text-[11px] text-brand-muted">
                 FOOD GURU CHAKRA™ &bull; Coimbatore (HQ)
             </p>
         </div>
