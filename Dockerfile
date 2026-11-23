@@ -62,10 +62,13 @@ RUN npm install && npm run build && rm -rf node_modules
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache \
     && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 
-# 11. Create Startup Entrypoint Script for Dynamic $PORT Binding on Render
+# 11. Create Startup Entrypoint Script for Dynamic $PORT Binding & DB Setup on Render
 RUN echo '#!/bin/sh\n\
 PORT_TO_USE="${PORT:-80}"\n\
 sed -i "s/80/${PORT_TO_USE}/g" /etc/apache2/ports.conf /etc/apache2/sites-available/*.conf\n\
+touch /var/www/html/database/database.sqlite || true\n\
+chown -R www-data:www-data /var/www/html/database || true\n\
+php artisan migrate --force || true\n\
 php artisan view:clear || true\n\
 php artisan view:cache || true\n\
 exec apache2-foreground' > /usr/local/bin/start-render.sh \
