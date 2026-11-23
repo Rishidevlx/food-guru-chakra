@@ -78,14 +78,15 @@
             <!-- 3. RIGHT: Quick Call Button & Mobile Menu Toggle -->
             <div class="flex items-center gap-3">
                 
-                <!-- Quick Call Action (Desktop/Tablet) -->
-                <a
-                    href="tel:+917845567089"
-                    class="hidden sm:inline-flex items-center gap-2.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg bg-brand text-white hover:bg-brand-hover hover:text-brand-gold transition-all duration-300 text-xs sm:text-sm font-semibold shadow-xs hover:shadow-md"
-                >
-                    <x-lucide-phone-call class="w-4 h-4 text-white" />
-                    <span>Quick Call</span>
-                </a>
+                <!-- Quick Call Action (Desktop Only: completely hidden on mobile/tablet) -->
+                <div class="hidden lg:block">
+                    <x-button variant="filled" href="tel:+917845567089" class="!py-2 !px-4 !text-xs sm:!text-sm">
+                        <x-slot:icon>
+                            <x-lucide-phone-call class="w-3.5 h-3.5 sm:w-4 sm:h-4 inline" />
+                        </x-slot:icon>
+                        Quick Call
+                    </x-button>
+                </div>
 
                 <!-- Mobile Menu Button (Hamburger / Close) -->
                 <button
@@ -103,7 +104,7 @@
         </div>
     </div>
 
-    <!-- 4. MOBILE NAVIGATION DROPDOWN DRAWER (Clean Content-Height Under Navbar) -->
+    <!-- 4. MOBILE NAVIGATION DROPDOWN DRAWER (Clean Content-Height Under Navbar with Generous Padding) -->
     <div
         x-show="mobileOpen"
         x-cloak
@@ -114,10 +115,10 @@
         x-transition:leave="transition ease-in duration-150"
         x-transition:leave-start="opacity-100 translate-y-0"
         x-transition:leave-end="opacity-0 -translate-y-2"
-        class="absolute top-full left-0 w-full bg-white border-b border-brand-divider shadow-xl px-4 py-3 sm:px-6 lg:hidden"
+        class="absolute top-full left-0 w-full bg-white border-b border-brand-divider shadow-xl px-5 py-5 sm:px-8 sm:py-6 lg:hidden"
     >
-        <!-- Navigation Links with Active State -->
-        <nav class="space-y-1">
+        <!-- Navigation Links without Arrows & with Comfortable Padding -->
+        <nav class="space-y-1.5 sm:space-y-2">
             @foreach ($navLinks as $link)
                 @php
                     $activeByPhp = ($link['url'] === '/contact' && $isContact) || ($link['url'] === '/' && $isHome);
@@ -126,28 +127,22 @@
                     href="{{ $link['url'] }}"
                     @click="mobileOpen = false; currentHash = '{{ str_replace('/', '', $link['url']) }}'"
                     :class="isActive('{{ $link['url'] }}') ? 'text-brand-gold font-semibold bg-brand-light/80' : 'text-brand-dark hover:text-brand-gold hover:bg-brand-light/60'"
-                    class="group flex items-center justify-between py-2 sm:py-2.5 px-3 rounded-lg font-heading text-sm sm:text-base font-normal transition-all duration-150 {{ $activeByPhp ? 'text-brand-gold font-semibold bg-brand-light/80' : 'text-brand-dark' }}"
+                    class="block py-2.5 sm:py-3 px-4 rounded-xl font-heading text-sm sm:text-base font-medium transition-all duration-150 {{ $activeByPhp ? 'text-brand-gold font-semibold bg-brand-light/80' : 'text-brand-dark' }}"
                 >
-                    <span>{{ $link['name'] }}</span>
-                    <x-lucide-arrow-right
-                        :class="isActive('{{ $link['url'] }}') ? 'opacity-100 text-brand-gold translate-x-1' : 'opacity-40 group-hover:opacity-100 group-hover:text-brand-gold group-hover:translate-x-1'"
-                        class="w-4 h-4 text-brand-muted transition-all transform"
-                    />
+                    {{ $link['name'] }}
                 </a>
             @endforeach
         </nav>
 
-        <!-- Quick Call Button in Mobile Drawer -->
-        <div class="pt-3 mt-2 border-t border-brand-divider">
-            <a
-                href="tel:+917845567089"
-                @click="mobileOpen = false"
-                class="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-brand text-white hover:text-brand-gold font-body font-semibold text-xs shadow-xs hover:bg-brand-hover transition-all"
-            >
-                <x-lucide-phone-call class="w-4 h-4" />
-                <span>Quick Call (+91 78455 67089)</span>
-            </a>
-            <p class="text-center font-body text-[10px] text-brand-muted mt-2">
+        <!-- Quick Call Button in Mobile Drawer using Official x-button -->
+        <div class="pt-4 mt-3 border-t border-brand-divider">
+            <x-button variant="filled" href="tel:+917845567089" @click="mobileOpen = false" class="w-full !py-3 !text-sm">
+                <x-slot:icon>
+                    <x-lucide-phone-call class="w-4 h-4 inline" />
+                </x-slot:icon>
+                Quick Call (+91 78455 67089)
+            </x-button>
+            <p class="text-center font-body text-[11px] text-brand-muted mt-2.5">
                 FOOD GURU CHAKRA™ &bull; Perambalur (HQ)
             </p>
         </div>
