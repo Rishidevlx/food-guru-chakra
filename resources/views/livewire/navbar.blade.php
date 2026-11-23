@@ -2,11 +2,15 @@
     x-data="{
         isScrolled: false,
         mobileOpen: false,
+        isHomePage: {{ request()->is('/') ? 'true' : 'false' }},
         currentPath: window.location.pathname,
         currentHash: window.location.hash || '',
         isActive(url) {
             if (url === '/contact') {
                 return this.currentPath.startsWith('/contact');
+            }
+            if (url === '/about') {
+                return this.currentPath.startsWith('/about');
             }
             if (this.currentPath === '/' || this.currentPath === '') {
                 if (url.includes('#')) {
@@ -22,7 +26,7 @@
         window.addEventListener('hashchange', () => { currentHash = window.location.hash || ''; });
     "
     @scroll.window="isScrolled = (window.scrollY > 20)"
-    :class="(isScrolled || mobileOpen) ? 'shadow-sm border-b border-brand-border bg-white py-3.5' : 'shadow-none border-b border-transparent bg-transparent py-4 sm:py-5'"
+    :class="(isScrolled || mobileOpen || !isHomePage) ? 'shadow-sm border-b border-brand-border bg-white py-3.5' : 'shadow-none border-b border-transparent bg-transparent py-4 sm:py-5'"
     class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
 >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,11 +45,12 @@
             <nav class="hidden lg:flex items-center gap-8">
                 @php
                     $isContact = request()->is('contact*');
+                    $isAbout = request()->is('about*');
                     $isHome = request()->is('/');
 
                     $navLinks = [
                         ['name' => 'Home', 'url' => '/'],
-                        ['name' => 'About', 'url' => '/#about'],
+                        ['name' => 'About', 'url' => '/about'],
                         ['name' => 'Services', 'url' => '/#services'],
                         ['name' => 'Training', 'url' => '/#training'],
                         ['name' => 'SHAKTHI', 'url' => '/#shakthi'],
@@ -56,7 +61,7 @@
 
                 @foreach ($navLinks as $link)
                     @php
-                        $activeByPhp = ($link['url'] === '/contact' && $isContact) || ($link['url'] === '/' && $isHome);
+                        $activeByPhp = ($link['url'] === '/contact' && $isContact) || ($link['url'] === '/about' && $isAbout) || ($link['url'] === '/' && $isHome);
                     @endphp
                     <a
                         href="{{ $link['url'] }}"
@@ -121,7 +126,7 @@
         <nav class="space-y-1.5 sm:space-y-2">
             @foreach ($navLinks as $link)
                 @php
-                    $activeByPhp = ($link['url'] === '/contact' && $isContact) || ($link['url'] === '/' && $isHome);
+                    $activeByPhp = ($link['url'] === '/contact' && $isContact) || ($link['url'] === '/about' && $isAbout) || ($link['url'] === '/' && $isHome);
                 @endphp
                 <a
                     href="{{ $link['url'] }}"
