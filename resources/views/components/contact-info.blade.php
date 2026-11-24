@@ -30,15 +30,18 @@
         </div>
 
         <!-- CARD 2: Email Us -->
-        <div class="p-4 rounded-lg bg-white border border-brand-divider shadow-2xs flex items-center gap-3.5">
-            <div class="w-10 h-10 rounded-md bg-brand-light text-brand flex items-center justify-center flex-shrink-0">
+        <div class="p-4 rounded-lg bg-white border border-brand-divider shadow-2xs flex items-start gap-3.5">
+            <div class="w-10 h-10 rounded-md bg-brand-light text-brand flex items-center justify-center flex-shrink-0 mt-0.5">
                 <x-lucide-mail class="w-5 h-5 text-brand" />
             </div>
-            <div class="flex-1 min-w-0">
+            <div class="flex-1 min-w-0 space-y-1">
                 <span class="block font-body text-[11px] font-semibold uppercase tracking-wider text-neutral-500 mb-0.5">
                     Email Us
                 </span>
-                <a href="mailto:chakramyid@gmail.com" class="block font-body text-sm sm:text-[15px] font-semibold text-black hover:text-brand-gold transition-colors truncate">
+                <a href="mailto:foodguruchakra@gmail.com" class="block font-body text-xs sm:text-[14px] font-semibold text-black hover:text-brand-gold transition-colors truncate">
+                    foodguruchakra@gmail.com
+                </a>
+                <a href="mailto:chakramyid@gmail.com" class="block font-body text-xs sm:text-[14px] font-semibold text-black hover:text-brand-gold transition-colors truncate">
                     chakramyid@gmail.com
                 </a>
             </div>
@@ -55,7 +58,7 @@
                 </span>
                 <p class="font-body text-xs sm:text-[13px] text-neutral-700 leading-relaxed">
                     Subha Complex, 106 F/ 7, Collector Office Road,<br>
-                    Annai Nagar, Perambalur – 621212, India.
+                    Annai Nagar, Perambalur – 621212, Tamilnadu, India.
                 </p>
             </div>
         </div>

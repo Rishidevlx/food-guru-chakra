@@ -23,13 +23,23 @@
 
 /* ⭐ SMOOTH VELOCITY TICKER / INFINITE MARQUEE */
 @keyframes marquee-scroll {
-    0% { transform: translate3d(0, 0, 0); }
-    100% { transform: translate3d(-50%, 0, 0); }
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
 }
 
 @keyframes marquee-scroll-reverse {
-    0% { transform: translate3d(-50%, 0, 0); }
-    100% { transform: translate3d(0, 0, 0); }
+    0% {
+        transform: translate3d(-50%, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
 }
 
 .animate-marquee {
@@ -59,6 +69,20 @@
     perspective: 1000px;
 }
 
+/* Stacked Card Outlined Number with Golden Stroke by default, solid Golden Fill on Hover */
+.stack-card-num {
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--theme-accent-gold);
+    transition: color 0.4s ease, -webkit-text-stroke 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.group:hover .stack-card-num {
+    color: var(--theme-accent-gold);
+    -webkit-text-stroke: 1.5px var(--theme-accent-gold);
+    transform: scale(1.06);
+}
+
 .preserve-3d {
     transform-style: preserve-3d;
 }
@@ -71,6 +95,7 @@
 .no-scrollbar::-webkit-scrollbar {
     display: none;
 }
+
 .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -90,12 +115,31 @@
 }
 
 /* Stagger Delay Utilities */
-.delay-100 { transition-delay: 100ms; }
-.delay-200 { transition-delay: 200ms; }
-.delay-300 { transition-delay: 300ms; }
-.delay-400 { transition-delay: 400ms; }
-.delay-500 { transition-delay: 500ms; }
-.delay-600 { transition-delay: 600ms; }
+.delay-100 {
+    transition-delay: 100ms;
+}
+
+.delay-200 {
+    transition-delay: 200ms;
+}
+
+.delay-300 {
+    transition-delay: 300ms;
+}
+
+.delay-400 {
+    transition-delay: 400ms;
+}
+
+.delay-500 {
+    transition-delay: 500ms;
+}
+
+.delay-600 {
+    transition-delay: 600ms;
+}
 
 /* Alpine Cloak to avoid flash of unstyled content */
-[x-cloak] { display: none !important; }
+[x-cloak] {
+    display: none !important;
+}

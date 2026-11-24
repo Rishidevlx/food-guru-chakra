@@ -14,8 +14,8 @@
                     <!-- Clean Operations Foreground Image -->
                     <div class="relative z-10 overflow-hidden shadow-xl bg-gray-100">
                         <img
-                            src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1000&q=85"
-                            alt="Commercial kitchen and food safety operations team"
+                            src="{{ asset('assets/Home/catering.jpg') }}"
+                            alt="Commercial catering and food safety operations"
                             class="w-full h-[260px] sm:h-[380px] lg:h-[500px] object-cover object-center filter brightness-[0.98] contrast-[1.03]"
                         />
                     </div>

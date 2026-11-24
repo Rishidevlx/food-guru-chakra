@@ -89,7 +89,8 @@
                 <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Bakeries & Confectionery Plants</span>
                 <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Food Manufacturing</span>
                 <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Retail Distribution</span>
-                <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Coimbatore (HQ)</span>
+                <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Trichy (HQ)</span>
+                <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Coimbatore</span>
                 <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Chennai</span>
                 <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Bangalore</span>
                 <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Madurai</span>
@@ -172,6 +173,10 @@
                         <x-lucide-message-circle class="w-4 h-4 text-[#25D366] flex-shrink-0" />
                         <span>+91 78455 67089</span>
                     </a>
+                    <a href="mailto:foodguruchakra@gmail.com" class="flex items-center gap-2 hover:text-brand-gold transition-colors">
+                        <x-lucide-mail class="w-4 h-4 text-brand-gold flex-shrink-0" />
+                        <span>foodguruchakra@gmail.com</span>
+                    </a>
                     <a href="mailto:chakramyid@gmail.com" class="flex items-center gap-2 hover:text-brand-gold transition-colors">
                         <x-lucide-mail class="w-4 h-4 text-brand-gold flex-shrink-0" />
                         <span>chakramyid@gmail.com</span>
@@ -214,7 +219,7 @@
                         <p class="font-body text-xs sm:text-[13px] text-white/75 leading-relaxed mb-4">
                             Subha Complex, 106 F/ 7,<br>
                             Collector Office Road, Annai Nagar,<br>
-                            Perambalur – 621212, India.
+                            Perambalur – 621212, Tamilnadu, India.
                         </p>
                     </div>
 
