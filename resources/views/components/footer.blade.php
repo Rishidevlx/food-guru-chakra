@@ -1,6 +1,5 @@
 <!-- ================================================================================
      FOOD GURU CHAKRA™ - OFFICIAL WEBSITE FOOTER
-     Layout matching Clean Matrix reference, styled in official brand color theme.
 ================================================================================ -->
 
 <!-- 1. TOP SECTION: Quick Links Strip (Matching FAQ background #EEF6EF with Golden Bullets) -->
@@ -18,34 +17,37 @@
                 Explore FOOD GURU CHAKRA™
             </h3>
             <div class="flex flex-wrap items-center gap-x-4 gap-y-2.5 font-body text-xs sm:text-sm text-brand-muted">
-                <a href="/" class="hover:text-brand-gold transition-colors flex items-center gap-2">
+                <a href="{{ route('home') }}" class="hover:text-brand-gold transition-colors flex items-center gap-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Home
                 </a>
-                <a href="#about" class="hover:text-brand-gold transition-colors flex items-center gap-2">
+                <a href="{{ route('about') }}" class="hover:text-brand-gold transition-colors flex items-center gap-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> About Us
+                </a>
+                <a href="{{ route('services') }}" class="hover:text-brand-gold transition-colors flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Services
+                </a>
+                <a href="{{ route('training') }}" class="hover:text-brand-gold transition-colors flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Training
+                </a>
+                <a href="{{ route('shakthi') }}" class="hover:text-brand-gold transition-colors flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> SHAKTHI™
+                </a>
+                <a href="{{ route('blog') }}" class="hover:text-brand-gold transition-colors flex items-center gap-2">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Blog
                 </a>
                 <a href="{{ route('contact') }}" class="hover:text-brand-gold transition-colors flex items-center gap-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Contact Us
                 </a>
-                <a href="#services" class="hover:text-brand-gold transition-colors flex items-center gap-2">
-                    <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Service Pillars
-                </a>
-                <a href="#industries" class="hover:text-brand-gold transition-colors flex items-center gap-2">
+                <a href="/#industries" class="hover:text-brand-gold transition-colors flex items-center gap-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Industries We Serve
                 </a>
-                <a href="#expertise" class="hover:text-brand-gold transition-colors flex items-center gap-2">
-                    <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Areas of Expertise
-                </a>
-                <a href="#why-us" class="hover:text-brand-gold transition-colors flex items-center gap-2">
+                <a href="/#why-us" class="hover:text-brand-gold transition-colors flex items-center gap-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Why Choose Us
                 </a>
-                <a href="#shakthi" class="hover:text-brand-gold transition-colors flex items-center gap-2">
-                    <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> SHAKTHI™ Initiative
-                </a>
-                <a href="#testimonials" class="hover:text-brand-gold transition-colors flex items-center gap-2">
+                <a href="/#testimonials" class="hover:text-brand-gold transition-colors flex items-center gap-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> Client Testimonials
                 </a>
-                <a href="#faq" class="hover:text-brand-gold transition-colors flex items-center gap-2">
+                <a href="/#faq" class="hover:text-brand-gold transition-colors flex items-center gap-2">
                     <span class="w-1.5 h-1.5 rounded-full bg-brand-gold flex-shrink-0"></span> FAQ
                 </a>
                 <a href="{{ route('privacy-policy') }}" class="hover:text-brand-gold transition-colors flex items-center gap-2">
@@ -101,7 +103,7 @@
     </div>
 </section>
 
-<!-- 2. MAIN FOOTER BLOCK (Dark Pine Green from Theme with Clean 5 Columns) -->
+<!-- 2. MAIN FOOTER BLOCK (Dark Pine Green from Theme with Clean 4 Columns) -->
 <footer class="bg-brand-dark text-white pt-12 sm:pt-20 pb-8 sm:pb-10 border-t border-white/10 relative overflow-hidden">
     
     <!-- Ambient subtle background glow -->
@@ -109,58 +111,44 @@
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-        <!-- 5-Column Grid Layout with Explicit Pure White Headings -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-8 mb-10 sm:mb-16">
+        <!-- 4-Column Grid: Pages, Sections, Get In Touch, Address -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-8 mb-10 sm:mb-16">
 
-            <!-- Col 1: Our Services (lg:col-span-2) -->
+            <!-- Col 1: Pages (lg:col-span-2) -->
             <div class="lg:col-span-2">
                 <h4 class="font-heading font-semibold text-sm sm:text-[15px] !text-white uppercase tracking-wider mb-5 pb-2 border-b border-white/10">
-                    Our Services
+                    Pages
                 </h4>
                 <ul class="space-y-3 font-body text-xs sm:text-[13px] text-white/70">
-                    <li><a href="#services" class="hover:text-brand-gold transition-colors">Consultancy Advisory</a></li>
-                    <li><a href="#services" class="hover:text-brand-gold transition-colors">Food Safety & Hygiene</a></li>
-                    <li><a href="#services" class="hover:text-brand-gold transition-colors">HACCP & FSMS Development</a></li>
-                    <li><a href="#services" class="hover:text-brand-gold transition-colors">QHSE & Quality Systems</a></li>
-                    <li><a href="#services" class="hover:text-brand-gold transition-colors">Kitchen Workflow Audit</a></li>
-                    <li><a href="#services" class="hover:text-brand-gold transition-colors">CAPA & Continuous Improvement</a></li>
-                    <li><a href="#services" class="hover:text-brand-gold transition-colors">Certification Support</a></li>
+                    <li><a href="{{ route('home') }}" class="hover:text-brand-gold transition-colors">Home</a></li>
+                    <li><a href="{{ route('about') }}" class="hover:text-brand-gold transition-colors">About Us</a></li>
+                    <li><a href="{{ route('services') }}" class="hover:text-brand-gold transition-colors">Services</a></li>
+                    <li><a href="{{ route('training') }}" class="hover:text-brand-gold transition-colors">Training</a></li>
+                    <li><a href="{{ route('shakthi') }}" class="hover:text-brand-gold transition-colors">SHAKTHI™</a></li>
+                    <li><a href="{{ route('blog') }}" class="hover:text-brand-gold transition-colors">Blog</a></li>
+                    <li><a href="{{ route('contact') }}" class="hover:text-brand-gold transition-colors">Contact Us</a></li>
                 </ul>
             </div>
 
-            <!-- Col 2: About Us (lg:col-span-2) -->
-            <div class="lg:col-span-2">
-                <h4 class="font-heading font-semibold text-sm sm:text-[15px] !text-white uppercase tracking-wider mb-5 pb-2 border-b border-white/10">
-                    About Us
-                </h4>
-                <ul class="space-y-3 font-body text-xs sm:text-[13px] text-white/70">
-                    <li><a href="#about" class="hover:text-brand-gold transition-colors">Who We Are</a></li>
-                    <li><a href="#about" class="hover:text-brand-gold transition-colors">Our Story & Mission</a></li>
-                    <li><a href="#about" class="hover:text-brand-gold transition-colors">Core Leadership</a></li>
-                    <li><a href="#why-us" class="hover:text-brand-gold transition-colors">Why FOOD GURU CHAKRA™</a></li>
-                    <li><a href="#shakthi" class="hover:text-brand-gold transition-colors">SHAKTHI™ Initiative</a></li>
-                    <li><a href="#testimonials" class="hover:text-brand-gold transition-colors">Client Testimonials</a></li>
-                    <li><a href="#faq" class="hover:text-brand-gold transition-colors">FAQ Knowledge Base</a></li>
-                </ul>
-            </div>
-
-            <!-- Col 3: Sectors We Serve (lg:col-span-3) -->
+            <!-- Col 2: Sections (lg:col-span-3) -->
             <div class="lg:col-span-3">
                 <h4 class="font-heading font-semibold text-sm sm:text-[15px] !text-white uppercase tracking-wider mb-5 pb-2 border-b border-white/10">
-                    Sectors We Serve
+                    Sections
                 </h4>
                 <ul class="space-y-3 font-body text-xs sm:text-[13px] text-white/70">
-                    <li><a href="#industries" class="hover:text-brand-gold transition-colors">Institutional Catering & Central Kitchens</a></li>
-                    <li><a href="#industries" class="hover:text-brand-gold transition-colors">Hospitals & Healthcare Dietary</a></li>
-                    <li><a href="#industries" class="hover:text-brand-gold transition-colors">Colleges & Industrial Food Services</a></li>
-                    <li><a href="#industries" class="hover:text-brand-gold transition-colors">Restaurants, Hotels & QSR Chains</a></li>
-                    <li><a href="#industries" class="hover:text-brand-gold transition-colors">Bakeries & Food Manufacturing</a></li>
-                    <li><a href="#industries" class="hover:text-brand-gold transition-colors">Retail & Cold-Chain Logistics</a></li>
+                    <li><a href="/about#who-we-are" class="hover:text-brand-gold transition-colors">Who We Are</a></li>
+                    <li><a href="/about#founder" class="hover:text-brand-gold transition-colors">Founder & Leadership</a></li>
+                    <li><a href="/#why-us" class="hover:text-brand-gold transition-colors">Why FOOD GURU CHAKRA™</a></li>
+                    <li><a href="/#industries" class="hover:text-brand-gold transition-colors">Industries We Serve</a></li>
+                    <li><a href="/services#how-it-works" class="hover:text-brand-gold transition-colors">How It Works</a></li>
+                    <li><a href="/shakthi#learning" class="hover:text-brand-gold transition-colors">What Are We Learning Today?</a></li>
+                    <li><a href="/#testimonials" class="hover:text-brand-gold transition-colors">Client Testimonials</a></li>
+                    <li><a href="/#faq" class="hover:text-brand-gold transition-colors">Frequently Asked Questions</a></li>
                 </ul>
             </div>
 
-            <!-- Col 4: Get In Touch & Socials (lg:col-span-2) -->
-            <div class="lg:col-span-2">
+            <!-- Col 3: Get In Touch & Socials (lg:col-span-4) -->
+            <div class="lg:col-span-4">
                 <h4 class="font-heading font-semibold text-sm sm:text-[15px] !text-white uppercase tracking-wider mb-5 pb-2 border-b border-white/10">
                     Get In Touch
                 </h4>
@@ -170,7 +158,7 @@
                         <span>+91 78455 67089</span>
                     </a>
                     <a href="https://wa.me/917845567089" target="_blank" class="flex items-center gap-2 hover:text-brand-gold transition-colors">
-                        <x-lucide-message-circle class="w-4 h-4 text-[#25D366] flex-shrink-0" />
+                        <x-lucide-message-circle class="w-4 h-4 text-brand-gold flex-shrink-0" />
                         <span>+91 78455 67089</span>
                     </a>
                     <a href="mailto:foodguruchakra@gmail.com" class="flex items-center gap-2 hover:text-brand-gold transition-colors">
@@ -203,35 +191,35 @@
                 </div>
             </div>
 
-            <!-- Col 5: Location Card (lg:col-span-3 - Matching Clean Matrix Card) -->
-            <div class="lg:col-span-3">
+            <!-- Col 4: Location / Address (lg:col-span-3 lg:pl-4 xl:pl-6) -->
+            <div class="lg:col-span-3 lg:pl-4 xl:pl-6">
                 <h4 class="font-heading font-semibold text-sm sm:text-[15px] !text-white uppercase tracking-wider mb-5 pb-2 border-b border-white/10">
                     Address
                 </h4>
                 
-                <div class="rounded-2xl bg-white/5 border border-white/10 p-5 backdrop-blur-xs flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center gap-2 text-brand-gold mb-3 font-semibold text-xs sm:text-sm">
-                            <x-lucide-map-pin class="w-4 h-4 text-brand-gold flex-shrink-0" />
-                            <span>Perambalur (HQ)</span>
-                        </div>
-
-                        <p class="font-body text-xs sm:text-[13px] text-white/75 leading-relaxed mb-4">
-                            Subha Complex, 106 F/ 7,<br>
-                            Collector Office Road, Annai Nagar,<br>
-                            Perambalur – 621212, Tamilnadu, India.
-                        </p>
+                <div class="space-y-3 font-body text-xs sm:text-[13px] text-white/80">
+                    <div class="flex items-center gap-2 text-brand-gold font-semibold text-xs sm:text-sm">
+                        <x-lucide-map-pin class="w-4 h-4 text-brand-gold flex-shrink-0" />
+                        <span>Perambalur (HQ)</span>
                     </div>
 
-                    <a
-                        href="https://maps.google.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-gold hover:underline"
-                    >
-                        <span>View on Google Map</span>
-                        <x-lucide-external-link class="w-3.5 h-3.5" />
-                    </a>
+                    <p class="text-white/75 leading-relaxed">
+                        Subha Complex, 106 F/ 7,<br>
+                        Collector Office Road, Annai Nagar,<br>
+                        Perambalur – 621212, Tamilnadu, India.
+                    </p>
+
+                    <div class="pt-1">
+                        <a
+                            href="https://maps.google.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="inline-flex items-center gap-1.5 text-xs font-semibold text-brand-gold hover:underline"
+                        >
+                            <span>View on Google Map</span>
+                            <x-lucide-external-link class="w-3.5 h-3.5" />
+                        </a>
+                    </div>
                 </div>
             </div>
 

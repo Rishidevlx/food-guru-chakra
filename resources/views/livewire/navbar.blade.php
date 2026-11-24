@@ -12,6 +12,18 @@
             if (url === '/about') {
                 return this.currentPath.startsWith('/about');
             }
+            if (url === '/services') {
+                return this.currentPath.startsWith('/services');
+            }
+            if (url === '/training') {
+                return this.currentPath.startsWith('/training');
+            }
+            if (url === '/shakthi') {
+                return this.currentPath.startsWith('/shakthi');
+            }
+            if (url === '/blog') {
+                return this.currentPath.startsWith('/blog');
+            }
             if (this.currentPath === '/' || this.currentPath === '') {
                 if (url.includes('#')) {
                     return this.currentHash === url.replace('/', '');
@@ -46,22 +58,26 @@
                 @php
                     $isContact = request()->is('contact*');
                     $isAbout = request()->is('about*');
+                    $isServices = request()->is('services*');
+                    $isShakthi = request()->is('shakthi*');
+                    $isTraining = request()->is('training*');
+                    $isBlog = request()->is('blog*');
                     $isHome = request()->is('/');
 
                     $navLinks = [
                         ['name' => 'Home', 'url' => '/'],
                         ['name' => 'About', 'url' => '/about'],
-                        ['name' => 'Services', 'url' => '/#services'],
-                        ['name' => 'Training', 'url' => '/#training'],
-                        ['name' => 'SHAKTHI', 'url' => '/#shakthi'],
-                        ['name' => 'Blog', 'url' => '/#blog'],
+                        ['name' => 'Services', 'url' => '/services'],
+                        ['name' => 'Training', 'url' => '/training'],
+                        ['name' => 'SHAKTHI', 'url' => '/shakthi'],
+                        ['name' => 'Blog', 'url' => '/blog'],
                         ['name' => 'Contact Us', 'url' => '/contact'],
                     ];
                 @endphp
 
                 @foreach ($navLinks as $link)
                     @php
-                        $activeByPhp = ($link['url'] === '/contact' && $isContact) || ($link['url'] === '/about' && $isAbout) || ($link['url'] === '/' && $isHome);
+                        $activeByPhp = ($link['url'] === '/contact' && $isContact) || ($link['url'] === '/about' && $isAbout) || ($link['url'] === '/services' && $isServices) || ($link['url'] === '/shakthi' && $isShakthi) || ($link['url'] === '/training' && $isTraining) || ($link['url'] === '/blog' && $isBlog) || ($link['url'] === '/' && $isHome);
                     @endphp
                     <a
                         href="{{ $link['url'] }}"
@@ -126,7 +142,7 @@
         <nav class="space-y-1.5 sm:space-y-2">
             @foreach ($navLinks as $link)
                 @php
-                    $activeByPhp = ($link['url'] === '/contact' && $isContact) || ($link['url'] === '/about' && $isAbout) || ($link['url'] === '/' && $isHome);
+                    $activeByPhp = ($link['url'] === '/contact' && $isContact) || ($link['url'] === '/about' && $isAbout) || ($link['url'] === '/services' && $isServices) || ($link['url'] === '/shakthi' && $isShakthi) || ($link['url'] === '/training' && $isTraining) || ($link['url'] === '/blog' && $isBlog) || ($link['url'] === '/' && $isHome);
                 @endphp
                 <a
                     href="{{ $link['url'] }}"

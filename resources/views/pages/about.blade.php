@@ -9,7 +9,7 @@
 <!-- =====================================================================
      ABOUT US - WHO WE ARE SECTION (Styled Identically to Homepage Industries Component)
 ====================================================================== -->
-<section class="py-14 sm:py-20 lg:py-28 bg-white text-brand-dark relative overflow-hidden">
+<section id="who-we-are" class="py-14 sm:py-20 lg:py-28 bg-white text-brand-dark relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         <!-- 2-Column Responsive Layout: Left (Content) & Right (Image with Offset Golden Box) -->

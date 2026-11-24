@@ -2,7 +2,7 @@
      MEET OUR FOUNDER COMPONENT
      Styled matching reference template layout with left photo & right bio
 ====================================================================== -->
-<section class="py-16 sm:py-20 lg:py-28 bg-secondary-bg text-brand-dark relative overflow-hidden">
+<section id="founder" class="py-16 sm:py-20 lg:py-28 bg-secondary-bg text-brand-dark relative overflow-hidden">
     
     <!-- Corner Decorative Dot Grid (Top Right) -->
     <div class="absolute top-6 right-6 sm:top-10 sm:right-12 pointer-events-none select-none opacity-40 hidden sm:block" aria-hidden="true">
